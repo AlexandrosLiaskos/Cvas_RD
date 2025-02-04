@@ -1,0 +1,9 @@
+# These configurations ensure consistent formatting across environments
+[tool.black]
+line-length = 88
+target-version = ['py37']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
