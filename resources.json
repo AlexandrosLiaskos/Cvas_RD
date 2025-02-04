@@ -1,0 +1,320 @@
+{
+  "repositories": [
+    {
+      "title": "Awesome Earth Engine",
+      "url": [
+        "https://github.com/opengeos/Awesome-GEE",
+        "https://awesome.geemap.org/"
+      ],
+      "description": "Curated list of Google Earth Engine resources, including tutorials, courses, and repositories, covering various aspects of coastal analysis and large-scale data processing.",
+      "tags": [
+        "GEE",
+        "Algorithm",
+        "Awesome_List",
+        "Github_Repo"
+      ],
+      "dateAdded": "2025-02-04"
+    },
+    {
+      "title": "CoastSat",
+      "url": ["https://github.com/kvos/CoastSat"],
+      "description": "Global shoreline mapping tool from satellite imagery, built on top of Google Earth Engine. Provides automated shoreline extraction capabilities using Landsat and Sentinel-2 imagery.",
+      "tags": [
+        "GEE",
+        "Python",
+        "Shoreline",
+        "Coastal",
+        "Satellite",
+        "Mapping",
+        "Tool"
+      ],
+      "dateAdded": "2025-02-04"
+    },
+    {
+      "title": "TAGEE",
+      "url": ["https://github.com/zecojls/tagee"],
+      "description": "Terrain Analysis in Google Earth Engine (TAGEE). Useful for coastal slope and geomorphology analysis.",
+      "tags": [
+        "GEE",
+        "JavaScript",
+        "Terrain",
+        "Analysis",
+        "Tool",
+        "Geomorphology",
+        "Slope"
+      ],
+      "dateAdded": "2025-02-04"
+    },
+    {
+      "title": "geetools-code-editor",
+      "url": ["https://github.com/fitoprincipe/geetools-code-editor"],
+      "description": "A set of tools for Google Earth Engine JavaScript Code Editor, including memory optimization and batch processing capabilities.",
+      "tags": [
+        "GEE",
+        "JavaScript",
+        "Tools",
+        "Optimization",
+        "Code_Editor"
+      ],
+      "dateAdded": "2025-02-04"
+    },
+    {
+      "title": "Earth Engine Community",
+      "url": ["https://github.com/google/earthengine-community"],
+      "description": "Official Google Earth Engine community tutorials and resources, including examples of coastal analysis and large-scale data processing.",
+      "tags": [
+        "GEE",
+        "Tutorial",
+        "Community",
+        "Examples",
+        "Official"
+      ],
+      "dateAdded": "2025-02-04"
+    },
+    {
+      "title": "ee-palettes",
+      "url": ["https://github.com/gee-community/ee-palettes"],
+      "description": "A module for generating color palettes in Earth Engine for better data visualization, compatible with ES5.",
+      "tags": [
+        "GEE",
+        "JavaScript",
+        "Visualization",
+        "Tool",
+        "ES5"
+      ],
+      "dateAdded": "2025-02-04"
+    }
+  ],
+  "papers": [
+    {
+      "title": "EXTRACTION OF COASTLINES WITH FUZZY APPROACH USING SENTINEL-1 SAR IMAGE",
+      "url": "https://isprs-archives.copernicus.org/articles/XLI-B7/747/2016/",
+      "doi": "https://isprs-archives.copernicus.org/articles/XLI-B7/747/2016/",
+      "abstract": "Coastlines are important features for water resources, sea products, energy resources etc. Coastlines are changed dynamically, thus automated methods are necessary for analysing and detecting the changes along the coastlines. In this study, Sentinel-1 C band SAR image has been used to extract the coastline with fuzzy logic approach. The used SAR image has VH polarisation and 10x10m. spatial resolution, covers 57 sqkm area from the south-east of Puerto-Rico. Additionally, radiometric calibration is applied to reduce atmospheric and orbit error, and speckle filter is used to reduce the noise. Then the image is terrain-corrected using SRTM digital surface model. Classification of SAR image is a challenging task since SAR and optical sensors have very different properties. Even between different bands of the SAR sensors, the images look very different. So, the classification of SAR image is difficult with the traditional unsupervised methods. In this study, a fuzzy approach has been applied to distinguish the coastal pixels than the land surface pixels. The standard deviation and the mean, median values are calculated to use as parameters in fuzzy approach. The Mean-standard-deviation (MS) Large membership function is used because the large amounts of land and ocean pixels dominate the SAR image with large mean and standard deviation values. The pixel values are multiplied with 1000 to easify the calculations. The mean is calculated as 23 and the standard deviation is calculated as 12 for the whole image. The multiplier parameters are selected as a: 0.58, b: 0.05 to maximize the land surface membership. The result is evaluated using airborne LIDAR data, only for the areas where LIDAR dataset is available and secondly manually digitized coastline. The laser points which are below 0,5 m are classified as the ocean points. The 3D alpha-shapes algorithm is used to detect the coastline points from LIDAR data. Minimum distances are calculated between the LIDAR points of coastline with the extracted coastline. The statistics of the distances are calculated as following; the mean is 5.82m, standard deviation is 5.83m and the median value is 4.08 m. Secondly, the extracted coastline is also evaluated with manually created lines on SAR image. Both lines are converted to dense points with 1 m interval. Then the closest distances are calculated between the points from extracted coastline and manually created coastline. The mean is 5.23m, standard deviation is 4.52m. and the median value is 4.13m for the calculated distances. The evaluation values are within the accuracy of used SAR data for both quality assessment approaches.",
+      "year": 2016,
+      "tags": [
+        "Approach",
+        "Sentinel-1",
+        "Coastlal",
+        "Fuzzy",
+        "Paper",
+        "SAR",
+        "LIDAR"
+      ],
+      "dateAdded": "2025-02-04"
+    },
+    {
+      "title": "CoastSat: A Google Earth Engine-enabled Python toolkit to extract shorelines from publicly available satellite imagery",
+      "url": "https://doi.org/10.1016/j.envsoft.2019.104528",
+      "doi": "10.1016/j.envsoft.2019.104528",
+      "abstract": "This paper presents CoastSat, an open-source python toolkit enabling the extraction of shorelines from Landsat 5, Landsat 7, Landsat 8 and Sentinel-2 imagery. The toolkit combines image processing techniques, machine learning, and the power of cloud computing through Google Earth Engine to create a user-friendly Python package for shoreline mapping at any location worldwide. The fully automated shoreline extraction workflow includes sub-pixel resolution shoreline detection, automated tidally-induced shoreline correction, and robust outlier removal.",
+      "year": 2019,
+      "tags": [
+        "GEE",
+        "Python",
+        "Shoreline",
+        "Coastal",
+        "Remote_Sensing",
+        "Tool",
+        "Paper"
+      ],
+      "dateAdded": "2025-02-04"
+    },
+    {
+      "title": "Earth's surface water change over the past 30 years",
+      "url": "https://doi.org/10.1038/nclimate3111",
+      "doi": "10.1038/nclimate3111",
+      "abstract": "Global-scale assessments of surface water dynamics using the Google Earth Engine platform, demonstrating methods for analyzing long-term changes in water bodies and coastlines.",
+      "year": 2016,
+      "tags": [
+        "GEE",
+        "Water",
+        "Change_Detection",
+        "Coastal",
+        "Time_Series",
+        "Global_Scale"
+      ],
+      "dateAdded": "2025-02-04"
+    },
+    {
+      "title": "Google Earth Engine Cloud Computing Platform for Remote Sensing Big Data Applications: A Comprehensive Review",
+      "url": "https://doi.org/10.1109/JSTARS.2020.3021052",
+      "doi": "10.1109/JSTARS.2020.3021052",
+      "abstract": "A comprehensive review of GEE capabilities, best practices, and optimization techniques for processing large-scale earth observation data.",
+      "year": 2020,
+      "tags": [
+        "GEE",
+        "Review",
+        "Cloud_Computing",
+        "Big_Data",
+        "Optimization",
+        "Best_Practices"
+      ],
+      "dateAdded": "2025-02-04"
+    },
+    {
+      "title": "High-resolution mapping of global surface water and its long-term changes",
+      "url": "https://doi.org/10.1038/nature20584",
+      "doi": "10.1038/nature20584",
+      "abstract": "Study utilizing GEE for mapping surface water dynamics globally, including coastal areas and sea level impacts, with efficient processing of over 3 million Landsat scenes.",
+      "year": 2016,
+      "tags": [
+        "GEE",
+        "Water_Mapping",
+        "Sea_Level",
+        "Coastal",
+        "Big_Data",
+        "Landsat"
+      ],
+      "dateAdded": "2025-02-04"
+    }
+  ],
+  "websites": [
+    {
+      "title": "Global Surface Water Explorer",
+      "url": "http://global-surface-water.appspot.com/",
+      "description": "Interactive platform for exploring global surface water changes, useful for coastal water analysis and sea level monitoring.",
+      "tags": [
+        "GEE",
+        "Water",
+        "Visualization",
+        "Analysis",
+        "Tool",
+        "Web_App"
+      ],
+      "dateAdded": "2025-02-04"
+    },
+    {
+      "title": "Climate Engine",
+      "url": "https://clim-engine.appspot.com/climateEngine",
+      "description": "Web application for climate analysis including sea surface temperature and climate variables relevant to coastal studies.",
+      "tags": [
+        "GEE",
+        "Climate",
+        "Analysis",
+        "Temperature",
+        "Web_App"
+      ],
+      "dateAdded": "2025-02-04"
+    },
+    {
+      "title": "CoastSat Shoreline Change Database",
+      "url": "http://coastsat.wrl.unsw.edu.au/",
+      "description": "Database of shoreline changes derived from satellite imagery using the CoastSat toolkit.",
+      "tags": [
+        "GEE",
+        "Shoreline",
+        "Database",
+        "Change_Detection",
+        "Web_App"
+      ],
+      "dateAdded": "2025-02-04"
+    }
+  ],
+  "courses": [
+    {
+      "title": "End-to-End Google Earth Engine",
+      "url": "https://courses.spatialthoughts.com/end-to-end-gee.html",
+      "description": "Comprehensive course covering GEE fundamentals, memory management, and optimization techniques by Ujaval Gandhi.",
+      "author": "Ujaval Gandhi",
+      "tags": [
+        "GEE",
+        "Course",
+        "Tutorial",
+        "Optimization",
+        "Best_Practices",
+        "Free"
+      ],
+      "dateAdded": "2025-02-04"
+    },
+    {
+      "title": "Spatial Data Management with Earth Engine",
+      "url": "https://www.youtube.com/playlist?list=PLAxJ4-o7ZoPdz9LHIJIxHlZe3t-MRCn61",
+      "description": "Video course focusing on efficient data management and processing in GEE by Qiusheng Wu.",
+      "author": "Qiusheng Wu",
+      "tags": [
+        "GEE",
+        "Course",
+        "Video",
+        "Data_Management",
+        "Performance",
+        "Free"
+      ],
+      "dateAdded": "2025-02-04"
+    }
+  ],
+  "books": [
+    {
+      "title": "Cloud-Based Remote Sensing with Google Earth Engine",
+      "url": "https://www.eefabook.org/",
+      "description": "Comprehensive guide covering GEE fundamentals, best practices, and optimization techniques for large-scale geospatial analysis.",
+      "tags": [
+        "GEE",
+        "Book",
+        "Remote_Sensing",
+        "Cloud_Computing",
+        "Best_Practices"
+      ],
+      "dateAdded": "2025-02-04"
+    }
+  ],
+  "datasets": [
+    {
+      "title": "Sentinel-1 SAR GRD",
+      "url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD",
+      "description": "Sentinel-1 SAR Ground Range Detected (GRD) scenes, processed using the Sentinel-1 Toolbox, useful for coastal monitoring and wave analysis.",
+      "tags": [
+        "GEE",
+        "Dataset",
+        "Sentinel-1",
+        "SAR",
+        "Coastal",
+        "Wave"
+      ],
+      "dateAdded": "2025-02-04"
+    },
+    {
+      "title": "Sentinel-2 MSI Surface Reflectance",
+      "url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR_HARMONIZED",
+      "description": "Harmonized Sentinel-2 MSI Surface Reflectance data, ideal for shoreline detection and coastal vegetation analysis.",
+      "tags": [
+        "GEE",
+        "Dataset",
+        "Sentinel-2",
+        "Optical",
+        "Surface_Reflectance",
+        "Coastal"
+      ],
+      "dateAdded": "2025-02-04"
+    }
+  ],
+  "presentations": [
+    {
+      "title": "Cloud computing and interactive mapping with Earth Engine and open-source GIS",
+      "url": "https://www.researchgate.net/publication/341722639_Cloud_computing_and_interactive_mapping_with_Earth_Engine_and_open-source_GIS",
+      "description": "Technical presentation focusing on efficient cloud computing strategies and memory optimization in GEE.",
+      "author": "Qiusheng Wu",
+      "date": "2020-05-28",
+      "tags": [
+        "GEE",
+        "Presentation",
+        "Cloud_Computing",
+        "Performance",
+        "Best_Practices"
+      ],
+      "dateAdded": "2025-02-04"
+    }
+  ],
+  "metadata": {
+    "lastUpdated": "2025-02-04T16:28:01+01:00",
+    "counts": {
+      "repositories": 6,
+      "papers": 5,
+      "websites": 3,
+      "courses": 2,
+      "books": 1,
+      "datasets": 2,
+      "presentations": 1
+    }
+  }
+}

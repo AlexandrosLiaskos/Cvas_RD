@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CVAS Resource Database</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <!-- Fuse.js for fuzzy search -->
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="top-bar">
+            <div class="search-container">
+                <input type="text" id="search" placeholder="Search... (Use @tag for tags, #title for titles)">
+            </div>
+            <button class="add-button" onclick="window.open('auth.html', '_blank')">
+                ➕ Add Resource
+            </button>
+        </div>
+        <div class="main-content">
+            <div class="explorer">
+                <div id="tree"></div>
+            </div>
+            <div class="preview">
+                <div id="preview-content"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
