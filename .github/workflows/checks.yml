@@ -31,17 +31,42 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y tidy
           for file in *.html; do
-            echo "Validating $file..."
-            tidy -q -e "$file" || true
+            if [ -f "$file" ]; then
+              echo "Validating $file..."
+              tidy -q -e "$file" || true
+            else
+              echo "No HTML files found"
+            fi
           done
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
 
       - name: Check JavaScript syntax
         run: |
-          sudo apt-get install -y node-jshint
-          jshint *.js || true
+          npm init -y
+          npm install eslint --save-dev
+          npx eslint --init || true
+          for file in *.js; do
+            if [ -f "$file" ]; then
+              echo "Validating $file..."
+              npx eslint "$file" || true
+            else
+              echo "No JavaScript files found"
+            fi
+          done
 
       - name: Validate CSS
         run: |
-          sudo npm install -g stylelint stylelint-config-standard
+          npm install stylelint stylelint-config-standard --save-dev
           echo '{"extends": "stylelint-config-standard"}' > .stylelintrc.json
-          npx stylelint "*.css" || true
+          for file in *.css; do
+            if [ -f "$file" ]; then
+              echo "Validating $file..."
+              npx stylelint "$file" || true
+            else
+              echo "No CSS files found"
+            fi
+          done
