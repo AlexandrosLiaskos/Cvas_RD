@@ -15,6 +15,11 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+env:
+  CVAS_ADMIN_PASSWORD: ${{ secrets.CVAS_ADMIN_PASSWORD }}
+  CVAS_JWT_SECRET: ${{ secrets.CVAS_JWT_SECRET || 'default-jwt-secret' }}
+  CVAS_GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+
 jobs:
   deploy:
     environment:
@@ -27,6 +32,18 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
+        with:
+          enablement: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyjwt PyGithub
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
