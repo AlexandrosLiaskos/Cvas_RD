@@ -16,6 +16,39 @@
             position: relative;
         }
 
+        /* Autocomplete styles */
+        .autocomplete-dropdown {
+            position: absolute;
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            max-height: 200px;
+            overflow-y: auto;
+            width: calc(100% - 2rem);
+            z-index: 1000;
+            display: none;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .autocomplete-item {
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-color);
+        }
+
+        .autocomplete-item:hover,
+        .autocomplete-item.selected {
+            background-color: var(--tag-bg);
+        }
+
+        .autocomplete-item .match-highlight {
+            color: var(--text-color);
+            text-decoration: underline;
+        }
+
         .close-button {
             position: absolute;
             top: 1rem;
@@ -202,21 +235,156 @@
 
     <script>
         let tags = new Set();
+        let allExistingTags = new Set();
         const tagInput = document.getElementById('tagInput');
         const tagContainer = document.getElementById('tagContainer');
         const form = document.getElementById('resourceForm');
+        let currentAutocompleteItems = [];
+        let selectedAutocompleteIndex = -1;
+
+        // Load existing tags from resources.json
+        async function loadExistingTags() {
+            try {
+                const response = await fetch('resources.json');
+                const data = await response.json();
+                
+                // Collect all existing tags from the data
+                Object.keys(data).forEach(category => {
+                    if (category !== 'metadata' && Array.isArray(data[category])) {
+                        data[category].forEach(item => {
+                            if (item.tags) {
+                                item.tags.forEach(tag => allExistingTags.add(tag));
+                            }
+                        });
+                    }
+                });
+            } catch (error) {
+                console.error('Error loading existing tags:', error);
+            }
+        }
+        loadExistingTags();
+
+        // Create and show autocomplete dropdown
+        function showAutocomplete(input) {
+            let dropdown = tagContainer.querySelector('.autocomplete-dropdown');
+            if (!dropdown) {
+                dropdown = document.createElement('div');
+                dropdown.className = 'autocomplete-dropdown';
+                tagContainer.appendChild(dropdown);
+            }
+
+            const searchTerm = input.value.trim().toLowerCase();
+            if (!searchTerm) {
+                dropdown.style.display = 'none';
+                return;
+            }
+
+            // Filter existing tags based on input
+            const suggestions = Array.from(allExistingTags)
+                .filter(tag => tag.toLowerCase().includes(searchTerm))
+                .filter(tag => !tags.has(tag)) // Don't suggest already added tags
+                .sort((a, b) => {
+                    const aStartsWith = a.toLowerCase().startsWith(searchTerm);
+                    const bStartsWith = b.toLowerCase().startsWith(searchTerm);
+                    if (aStartsWith && !bStartsWith) return -1;
+                    if (!aStartsWith && bStartsWith) return 1;
+                    return a.localeCompare(b);
+                });
+
+            currentAutocompleteItems = suggestions.slice(0, 10);
+
+            if (currentAutocompleteItems.length > 0) {
+                dropdown.innerHTML = currentAutocompleteItems
+                    .map((item, index) => `
+                        <div class="autocomplete-item" data-index="${index}">
+                            ${highlightMatch(item, searchTerm)}
+                        </div>
+                    `)
+                    .join('');
+
+                dropdown.querySelectorAll('.autocomplete-item').forEach(item => {
+                    item.addEventListener('click', () => {
+                        applySuggestion(currentAutocompleteItems[item.dataset.index]);
+                    });
+                });
+
+                dropdown.style.display = 'block';
+            } else {
+                dropdown.style.display = 'none';
+            }
+        }
+
+        // Highlight matching parts of suggestions
+        function highlightMatch(text, query) {
+            if (!query) return text;
+            const regex = new RegExp(`(${query})`, 'gi');
+            return text.replace(regex, '<span class="match-highlight">$1</span>');
+        }
+
+        // Apply selected suggestion
+        function applySuggestion(tag) {
+            addTag(tag);
+            tagInput.value = '';
+            const dropdown = tagContainer.querySelector('.autocomplete-dropdown');
+            if (dropdown) dropdown.style.display = 'none';
+        }
 
         // Handle tag input
+        tagInput.addEventListener('input', (e) => {
+            showAutocomplete(e.target);
+        });
+
         tagInput.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter') {
+            const dropdown = tagContainer.querySelector('.autocomplete-dropdown');
+            if (dropdown && dropdown.style.display !== 'none') {
+                switch (e.key) {
+                    case 'ArrowDown':
+                        e.preventDefault();
+                        selectedAutocompleteIndex = Math.min(selectedAutocompleteIndex + 1, currentAutocompleteItems.length - 1);
+                        updateAutocompleteSelection();
+                        break;
+                    case 'ArrowUp':
+                        e.preventDefault();
+                        selectedAutocompleteIndex = Math.max(selectedAutocompleteIndex - 1, 0);
+                        updateAutocompleteSelection();
+                        break;
+                    case 'Enter':
+                        e.preventDefault();
+                        if (selectedAutocompleteIndex >= 0) {
+                            applySuggestion(currentAutocompleteItems[selectedAutocompleteIndex]);
+                            selectedAutocompleteIndex = -1;
+                        } else {
+                            const tag = tagInput.value.trim();
+                            if (tag && !tags.has(tag)) {
+                                addTag(tag);
+                                tagInput.value = '';
+                            }
+                        }
+                        break;
+                    case 'Escape':
+                        dropdown.style.display = 'none';
+                        selectedAutocompleteIndex = -1;
+                        break;
+                }
+            } else if (e.key === 'Enter') {
                 e.preventDefault();
                 const tag = tagInput.value.trim();
                 if (tag && !tags.has(tag)) {
                     addTag(tag);
+                    tagInput.value = '';
                 }
-                tagInput.value = '';
             }
         });
+
+        // Update visual selection in autocomplete dropdown
+        function updateAutocompleteSelection() {
+            const items = tagContainer.querySelectorAll('.autocomplete-item');
+            items.forEach(item => item.classList.remove('selected'));
+            if (selectedAutocompleteIndex >= 0) {
+                items[selectedAutocompleteIndex].classList.add('selected');
+                items[selectedAutocompleteIndex].scrollIntoView({ block: 'nearest' });
+            }
+        }
 
         function addTag(tag) {
             tags.add(tag);
@@ -233,6 +401,14 @@
             tags.delete(tag);
             element.remove();
         }
+
+        // Close autocomplete when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.tag-container')) {
+                const dropdown = tagContainer.querySelector('.autocomplete-dropdown');
+                if (dropdown) dropdown.style.display = 'none';
+            }
+        });
 
         // Handle form submission
         form.addEventListener('submit', async (e) => {
