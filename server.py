@@ -1,16 +1,18 @@
-from http.server import HTTPServer, SimpleHTTPRequestHandler
-import json
-import os
-from datetime import datetime
-import jwt
-from github import Github
 import hashlib
 import hmac
+import json
+import os
 import time
+from datetime import datetime
+from http.server import HTTPServer, SimpleHTTPRequestHandler
 
+import jwt
+from github import Github
 
 # These would be set as environment variables in GitHub
-ADMIN_PASSWORD = os.getenv("CVAS_ADMIN_PASSWORD", "default_password")  # Change in production
+ADMIN_PASSWORD = os.getenv(
+    "CVAS_ADMIN_PASSWORD", "default_password"
+)  # Change in production
 JWT_SECRET = os.getenv("CVAS_JWT_SECRET", "your-secret-key")  # Change in production
 GITHUB_PAT = os.getenv("CVAS_GITHUB_PAT")  # Personal Access Token
 GITHUB_REPO = "AlexandrosLiaskos/Cvas_RD"
