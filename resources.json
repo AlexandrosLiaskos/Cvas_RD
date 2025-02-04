@@ -167,6 +167,132 @@
         "Landsat"
       ],
       "dateAdded": "2025-02-04"
+    },
+    {
+      "title": "Analysis of a Complex Coastal Area for Erosion Risk Assessment",
+      "url": "https://doi.org/10.21660/2024.116.4233",
+      "doi": "10.21660/2024.116.4233",
+      "dateAdded": "2025-02-04",
+      "tags": ["Coastal", "Erosion", "Risk_Assessment"]
+    },
+    {
+      "title": "Semi-Automated Coastline Mapping Using Google Earth Engine",
+      "url": "https://doi.org/10.3390/earth5040033",
+      "doi": "10.3390/earth5040033",
+      "dateAdded": "2025-02-04",
+      "tags": ["GEE", "Coastline", "Mapping", "Automation"]
+    },
+    {
+      "title": "Coastal Storm Analysis Using Remote Sensing",
+      "url": "https://doi.org/10.3390/jmse11010023",
+      "doi": "10.3390/jmse11010023",
+      "dateAdded": "2025-02-04",
+      "tags": ["Coastal", "Storm", "Remote_Sensing"]
+    },
+    {
+      "title": "Geospatial Analysis of Coastal Changes",
+      "url": "https://doi.org/10.3390/geographies3030027",
+      "doi": "10.3390/geographies3030027",
+      "dateAdded": "2025-02-04",
+      "tags": ["Coastal", "Geospatial", "Change_Detection"]
+    },
+    {
+      "title": "Satellite-Based Coastal Monitoring",
+      "url": "https://doi.org/10.1016/j.apgeog.2022.102710",
+      "doi": "10.1016/j.apgeog.2022.102710",
+      "dateAdded": "2025-02-04",
+      "tags": ["Coastal", "Monitoring", "Satellite"]
+    },
+    {
+      "title": "Climate Change Impacts on Coastal Areas",
+      "url": "https://doi.org/10.1038/s41558-022-01281-0",
+      "doi": "10.1038/s41558-022-01281-0",
+      "dateAdded": "2025-02-04",
+      "tags": ["Climate_Change", "Coastal", "Impact_Assessment"]
+    },
+    {
+      "title": "Environmental Engineering Applications in Coastal Zones",
+      "url": "https://doi.org/10.1007/s40710-022-00577-9",
+      "doi": "10.1007/s40710-022-00577-9",
+      "dateAdded": "2025-02-04",
+      "tags": ["Environmental_Engineering", "Coastal", "Applications"]
+    },
+    {
+      "title": "Earth Surface Processes in Coastal Areas",
+      "url": "https://doi.org/10.1088/1755-1315/989/1/012014",
+      "doi": "10.1088/1755-1315/989/1/012014",
+      "dateAdded": "2025-02-04",
+      "tags": ["Earth_Surface", "Coastal", "Processes"]
+    },
+    {
+      "title": "Scientific Reports: Coastal Erosion Study",
+      "url": "https://doi.org/10.1038/s41598-022-26374-w",
+      "doi": "10.1038/s41598-022-26374-w",
+      "dateAdded": "2025-02-04",
+      "tags": ["Coastal", "Erosion", "Study"]
+    },
+    {
+      "title": "Marine Science and Engineering Research",
+      "url": "https://doi.org/10.3390/jmse10111673",
+      "doi": "10.3390/jmse10111673",
+      "dateAdded": "2025-02-04",
+      "tags": ["Marine_Science", "Engineering", "Research"]
+    },
+    {
+      "title": "Scientific Reports: Coastal Management",
+      "url": "https://doi.org/10.1038/s41598-020-77926-x",
+      "doi": "10.1038/s41598-020-77926-x",
+      "dateAdded": "2025-02-04",
+      "tags": ["Coastal", "Management"]
+    },
+    {
+      "title": "Environmental Monitoring Software",
+      "url": "https://doi.org/10.1016/j.envsoft.2019.104528",
+      "doi": "10.1016/j.envsoft.2019.104528",
+      "dateAdded": "2025-02-04",
+      "tags": ["Environmental", "Monitoring", "Software"]
+    },
+    {
+      "title": "Geosciences Research on Coastal Areas",
+      "url": "https://doi.org/10.3390/geosciences9050219",
+      "doi": "10.3390/geosciences9050219",
+      "dateAdded": "2025-02-04",
+      "tags": ["Geosciences", "Coastal", "Research"]
+    },
+    {
+      "title": "Nature Communications: Coastal Study",
+      "url": "https://doi.org/10.1038/s41467-019-10347-1",
+      "doi": "10.1038/s41467-019-10347-1",
+      "dateAdded": "2025-02-04",
+      "tags": ["Coastal", "Study", "Communications"]
+    },
+    {
+      "title": "Water Resources Research",
+      "url": "https://doi.org/10.3390/w10091218",
+      "doi": "10.3390/w10091218",
+      "dateAdded": "2025-02-04",
+      "tags": ["Water", "Resources", "Research"]
+    },
+    {
+      "title": "Meteorological Applications",
+      "url": "https://doi.org/10.1002/met.1585",
+      "doi": "10.1002/met.1585",
+      "dateAdded": "2025-02-04",
+      "tags": ["Meteorology", "Applications"]
+    },
+    {
+      "title": "Ocean and Coastal Management",
+      "url": "https://doi.org/10.1016/j.ocecoaman.2014.12.011",
+      "doi": "10.1016/j.ocecoaman.2014.12.011",
+      "dateAdded": "2025-02-04",
+      "tags": ["Ocean", "Coastal", "Management"]
+    },
+    {
+      "title": "Environmental Hazards Assessment",
+      "url": "https://doi.org/10.3763/ehaz.2010.0052",
+      "doi": "10.3763/ehaz.2010.0052",
+      "dateAdded": "2025-02-04",
+      "tags": ["Environmental", "Hazards", "Assessment"]
     }
   ],
   "websites": [
@@ -309,7 +435,7 @@
     "lastUpdated": "2025-02-04T16:28:01+01:00",
     "counts": {
       "repositories": 6,
-      "papers": 5,
+      "papers": 22,
       "websites": 3,
       "courses": 2,
       "books": 1,
