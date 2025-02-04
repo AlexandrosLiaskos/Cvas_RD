@@ -17,7 +17,9 @@
     },
     {
       "title": "CoastSat",
-      "url": ["https://github.com/kvos/CoastSat"],
+      "url": [
+        "https://github.com/kvos/CoastSat"
+      ],
       "description": "Global shoreline mapping tool from satellite imagery, built on top of Google Earth Engine. Provides automated shoreline extraction capabilities using Landsat and Sentinel-2 imagery.",
       "tags": [
         "GEE",
@@ -32,7 +34,9 @@
     },
     {
       "title": "TAGEE",
-      "url": ["https://github.com/zecojls/tagee"],
+      "url": [
+        "https://github.com/zecojls/tagee"
+      ],
       "description": "Terrain Analysis in Google Earth Engine (TAGEE). Useful for coastal slope and geomorphology analysis.",
       "tags": [
         "GEE",
@@ -47,7 +51,9 @@
     },
     {
       "title": "geetools-code-editor",
-      "url": ["https://github.com/fitoprincipe/geetools-code-editor"],
+      "url": [
+        "https://github.com/fitoprincipe/geetools-code-editor"
+      ],
       "description": "A set of tools for Google Earth Engine JavaScript Code Editor, including memory optimization and batch processing capabilities.",
       "tags": [
         "GEE",
@@ -60,7 +66,9 @@
     },
     {
       "title": "Earth Engine Community",
-      "url": ["https://github.com/google/earthengine-community"],
+      "url": [
+        "https://github.com/google/earthengine-community"
+      ],
       "description": "Official Google Earth Engine community tutorials and resources, including examples of coastal analysis and large-scale data processing.",
       "tags": [
         "GEE",
@@ -73,7 +81,9 @@
     },
     {
       "title": "ee-palettes",
-      "url": ["https://github.com/gee-community/ee-palettes"],
+      "url": [
+        "https://github.com/gee-community/ee-palettes"
+      ],
       "description": "A module for generating color palettes in Earth Engine for better data visualization, compatible with ES5.",
       "tags": [
         "GEE",
@@ -169,130 +179,205 @@
       "dateAdded": "2025-02-04"
     },
     {
-      "title": "Analysis of a Complex Coastal Area for Erosion Risk Assessment",
-      "url": "https://doi.org/10.21660/2024.116.4233",
+      "title": "ASSESSMENT OF COASTAL VULNERABILITY INDEX (CVI) AND ITS APPLICATION ALONG THE SRAGI COAST, SOUTH LAMPUNG, INDONESIA",
+      "url": "https://geomatejournal.com/geomate/article/view/4233",
       "doi": "10.21660/2024.116.4233",
-      "dateAdded": "2025-02-04",
-      "tags": ["Coastal", "Erosion", "Risk_Assessment"]
+      "abstract": "One of the simplest and most widely used methods for evaluating coastal susceptibility to geomorphological and physical parameters is the Coastal susceptibility Index (CVI). This approach can thus be utilized as a resource for the local government to evaluate to measure vulnerability and determine the degree of risk that a coast faces. To execute successful risk reduction measures, this measurement is a fundamental first step. Thus, the purpose of this study is to evaluate the vulnerability of the coastal areas in Sragi, South Lampung, Indonesia, using the Coastal Vulnerability Index (CVI) approach, which calculates physical and geomorphological parameters. The six factors that make up the assessment of coastal vulnerability are as follows: tidal range, significant wave height, coastal elevation, sea-level change rate, shoreline change rate, and geomorphology. The 6 km long Sragi coastal areas are split into 12 sections. With a covering area of 500 meters, each segment accurately reflects the size of the region under assessment. The result shows that the total of 83.33% of the Sragi coastal area is classified as having a very high vulnerability index, influenced by the values of shoreline change predominantly experiencing a change of < -2.0 m/year along a 5 km stretch of the coastline and the number of coastal slopes. This condition indicates that along the 5 km coastline of Sragi, there is a more predominant occurrence of erosion or shoreline retreat.",
+      "year": 2024,
+      "tags": [
+        "Vulnerability_Assessment",
+        "Coastal_Area",
+        "CVI",
+        "Indonesia",
+        "Coastal_Zone",
+        "Geomorphology",
+        "Erosion"
+      ],
+      "dateAdded": "2025-02-04"
     },
     {
-      "title": "Semi-Automated Coastline Mapping Using Google Earth Engine",
-      "url": "https://doi.org/10.3390/earth5040033",
-      "doi": "10.3390/earth5040033",
-      "dateAdded": "2025-02-04",
-      "tags": ["GEE", "Coastline", "Mapping", "Automation"]
-    },
-    {
-      "title": "Coastal Storm Analysis Using Remote Sensing",
-      "url": "https://doi.org/10.3390/jmse11010023",
-      "doi": "10.3390/jmse11010023",
-      "dateAdded": "2025-02-04",
-      "tags": ["Coastal", "Storm", "Remote_Sensing"]
-    },
-    {
-      "title": "Geospatial Analysis of Coastal Changes",
-      "url": "https://doi.org/10.3390/geographies3030027",
-      "doi": "10.3390/geographies3030027",
-      "dateAdded": "2025-02-04",
-      "tags": ["Coastal", "Geospatial", "Change_Detection"]
-    },
-    {
-      "title": "Satellite-Based Coastal Monitoring",
-      "url": "https://doi.org/10.1016/j.apgeog.2022.102710",
-      "doi": "10.1016/j.apgeog.2022.102710",
-      "dateAdded": "2025-02-04",
-      "tags": ["Coastal", "Monitoring", "Satellite"]
-    },
-    {
-      "title": "Climate Change Impacts on Coastal Areas",
-      "url": "https://doi.org/10.1038/s41558-022-01281-0",
+      "title": "Global temperature change attributable to humans prior to and after the 2015 Paris Agreement",
+      "url": "https://www.nature.com/articles/s41558-022-01281-0",
       "doi": "10.1038/s41558-022-01281-0",
-      "dateAdded": "2025-02-04",
-      "tags": ["Climate_Change", "Coastal", "Impact_Assessment"]
+      "year": 2022,
+      "tags": [
+        "Climate_Change",
+        "Paris_Agreement",
+        "Temperature",
+        "Global_Warming",
+        "Human_Impact"
+      ],
+      "dateAdded": "2025-02-04"
     },
     {
-      "title": "Environmental Engineering Applications in Coastal Zones",
-      "url": "https://doi.org/10.1007/s40710-022-00577-9",
-      "doi": "10.1007/s40710-022-00577-9",
-      "dateAdded": "2025-02-04",
-      "tags": ["Environmental_Engineering", "Coastal", "Applications"]
+      "title": "Long-Term Shoreline Change along the Eastern Coast of Peninsular Malaysia Using Satellite Images",
+      "url": "https://www.mdpi.com/2077-1312/10/11/1602",
+      "doi": "10.3390/jmse10111602",
+      "year": 2022,
+      "abstract": "Coastal areas are highly dynamic and vulnerable to various natural and anthropogenic factors. The eastern coast of Peninsular Malaysia has experienced significant changes in shoreline position due to monsoon seasons and human activities. This study aimed to analyze the long-term shoreline changes along the eastern coast of Peninsular Malaysia using multi-temporal satellite images from 1988 to 2020.",
+      "tags": [
+        "Shoreline_Change",
+        "Remote_Sensing",
+        "Coastal_Dynamics",
+        "Malaysia",
+        "Satellite_Imagery",
+        "Coastal_Management"
+      ],
+      "dateAdded": "2025-02-04"
     },
     {
-      "title": "Earth Surface Processes in Coastal Areas",
-      "url": "https://doi.org/10.1088/1755-1315/989/1/012014",
-      "doi": "10.1088/1755-1315/989/1/012014",
-      "dateAdded": "2025-02-04",
-      "tags": ["Earth_Surface", "Coastal", "Processes"]
+      "title": "Cliff erosion patterns and rates along the California coast from repeat aerial photogrammetry and airborne lidar",
+      "url": "https://esurf.copernicus.org/articles/12/1049/2024/",
+      "doi": "10.5194/esurf-12-1049-2024",
+      "year": 2024,
+      "abstract": "Coastal cliff erosion threatens infrastructure and public safety along the California coast, yet the patterns and drivers of cliff erosion over large spatial scales remain poorly understood. We analyze coastal cliff erosion along ∼ 300 km of the California coast between 2009–2011 and 2016 using repeat aerial photogrammetry and lidar.",
+      "tags": [
+        "Cliff_Erosion",
+        "California_Coast",
+        "LiDAR",
+        "Coastal_Monitoring",
+        "Photogrammetry",
+        "Coastal_Hazards"
+      ],
+      "dateAdded": "2025-02-04"
     },
     {
-      "title": "Scientific Reports: Coastal Erosion Study",
-      "url": "https://doi.org/10.1038/s41598-022-26374-w",
-      "doi": "10.1038/s41598-022-26374-w",
-      "dateAdded": "2025-02-04",
-      "tags": ["Coastal", "Erosion", "Study"]
+      "title": "Mapping Coastal Change in Alaska Using Deep Learning on Historical Aerial Photos",
+      "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024EF005013",
+      "doi": "10.1029/2024EF005013",
+      "year": 2024,
+      "tags": [
+        "Deep_Learning",
+        "Coastal_Change",
+        "Alaska",
+        "Aerial_Photography",
+        "Historical_Data",
+        "Machine_Learning"
+      ],
+      "dateAdded": "2025-02-04"
     },
     {
-      "title": "Marine Science and Engineering Research",
-      "url": "https://doi.org/10.3390/jmse10111673",
-      "doi": "10.3390/jmse10111673",
-      "dateAdded": "2025-02-04",
-      "tags": ["Marine_Science", "Engineering", "Research"]
+      "title": "Arctic Data Center: A Repository for Arctic Research Data",
+      "url": "https://arcticdata.io/catalog",
+      "tags": [
+        "Arctic",
+        "Data_Repository",
+        "Climate_Data",
+        "Research_Data",
+        "Environmental_Data"
+      ],
+      "dateAdded": "2025-02-04"
     },
     {
-      "title": "Scientific Reports: Coastal Management",
-      "url": "https://doi.org/10.1038/s41598-020-77926-x",
-      "doi": "10.1038/s41598-020-77926-x",
-      "dateAdded": "2025-02-04",
-      "tags": ["Coastal", "Management"]
+      "title": "21st Century Sea-Level Rise Could Exceed IPCC Projections for Strong-Warming Futures",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.2409411121",
+      "doi": "10.1073/pnas.2409411121",
+      "year": 2024,
+      "tags": [
+        "Sea_Level_Rise",
+        "Climate_Change",
+        "IPCC",
+        "Projections",
+        "Climate_Models",
+        "Future_Scenarios"
+      ],
+      "dateAdded": "2025-02-04"
     },
     {
-      "title": "Environmental Monitoring Software",
-      "url": "https://doi.org/10.1016/j.envsoft.2019.104528",
-      "doi": "10.1016/j.envsoft.2019.104528",
-      "dateAdded": "2025-02-04",
-      "tags": ["Environmental", "Monitoring", "Software"]
+      "title": "Comprehensive Assessment of Coastal Vulnerability Using Remote Sensing and GIS Techniques",
+      "url": "https://www.osti.gov/servlets/purl/1670531/",
+      "tags": [
+        "Coastal_Vulnerability",
+        "Remote_Sensing",
+        "GIS",
+        "Assessment",
+        "Coastal_Management"
+      ],
+      "dateAdded": "2025-02-04"
     },
     {
-      "title": "Geosciences Research on Coastal Areas",
-      "url": "https://doi.org/10.3390/geosciences9050219",
-      "doi": "10.3390/geosciences9050219",
-      "dateAdded": "2025-02-04",
-      "tags": ["Geosciences", "Coastal", "Research"]
+      "title": "Using Machine Learning to Predict Coastal Erosion from Satellite Images",
+      "url": "https://ui.adsabs.harvard.edu/abs/2023AGUFM.C33C1416X/abstract",
+      "year": 2023,
+      "tags": [
+        "Machine_Learning",
+        "Coastal_Erosion",
+        "Satellite_Imagery",
+        "Prediction",
+        "Remote_Sensing"
+      ],
+      "dateAdded": "2025-02-04"
     },
     {
-      "title": "Nature Communications: Coastal Study",
-      "url": "https://doi.org/10.1038/s41467-019-10347-1",
-      "doi": "10.1038/s41467-019-10347-1",
-      "dateAdded": "2025-02-04",
-      "tags": ["Coastal", "Study", "Communications"]
+      "title": "Global ice loss driven by climate change accelerating across continents",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0048969724005242",
+      "doi": "10.1016/j.scitotenv.2024.168747",
+      "year": 2024,
+      "tags": [
+        "Climate_Change",
+        "Ice_Loss",
+        "Global_Change",
+        "Environmental_Science",
+        "Remote_Sensing"
+      ],
+      "dateAdded": "2025-02-04"
     },
     {
-      "title": "Water Resources Research",
-      "url": "https://doi.org/10.3390/w10091218",
-      "doi": "10.3390/w10091218",
-      "dateAdded": "2025-02-04",
-      "tags": ["Water", "Resources", "Research"]
+      "title": "Extreme Arctic rain events trigger widespread winter warming",
+      "url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024GL108622",
+      "doi": "10.1029/2024GL108622",
+      "year": 2024,
+      "tags": [
+        "Arctic",
+        "Climate_Change",
+        "Precipitation",
+        "Winter_Warming",
+        "Extreme_Events"
+      ],
+      "dateAdded": "2025-02-04"
     },
     {
-      "title": "Meteorological Applications",
-      "url": "https://doi.org/10.1002/met.1585",
-      "doi": "10.1002/met.1585",
-      "dateAdded": "2025-02-04",
-      "tags": ["Meteorology", "Applications"]
+      "title": "Machine learning accelerates detection of coral reef change",
+      "url": "https://www.nature.com/articles/s41558-024-02074-3",
+      "doi": "10.1038/s41558-024-02074-3",
+      "year": 2024,
+      "tags": [
+        "Machine_Learning",
+        "Coral_Reefs",
+        "Climate_Change",
+        "Marine_Ecosystems",
+        "Environmental_Monitoring"
+      ],
+      "dateAdded": "2025-02-04"
     },
     {
-      "title": "Ocean and Coastal Management",
-      "url": "https://doi.org/10.1016/j.ocecoaman.2014.12.011",
-      "doi": "10.1016/j.ocecoaman.2014.12.011",
-      "dateAdded": "2025-02-04",
-      "tags": ["Ocean", "Coastal", "Management"]
+      "title": "Semi-automated feature extraction in Canadian Arctic coastal imagery",
+      "url": "https://www.tandfonline.com/doi/full/10.1080/07038992.2017.1370367",
+      "doi": "10.1080/07038992.2017.1370367",
+      "year": 2017,
+      "tags": [
+        "Arctic",
+        "Coastal",
+        "Remote_Sensing",
+        "Feature_Extraction",
+        "Image_Processing",
+        "Canada"
+      ],
+      "dateAdded": "2025-02-04"
     },
     {
-      "title": "Environmental Hazards Assessment",
-      "url": "https://doi.org/10.3763/ehaz.2010.0052",
-      "doi": "10.3763/ehaz.2010.0052",
-      "dateAdded": "2025-02-04",
-      "tags": ["Environmental", "Hazards", "Assessment"]
+      "title": "Defining the arctic coastline with satellite data",
+      "url": "https://repositum.tuwien.at/bitstream/20.500.12708/17415/1/Efimova%20Aleksandra%20-%202021%20-%20Defining%20the%20arctic%20coastline%20with%20satellite%20data.pdf",
+      "year": 2021,
+      "tags": [
+        "Arctic",
+        "Coastline",
+        "Satellite_Data",
+        "Remote_Sensing",
+        "Methodology",
+        "Thesis"
+      ],
+      "dateAdded": "2025-02-04"
     }
   ],
   "websites": [
@@ -333,6 +418,47 @@
         "Database",
         "Change_Detection",
         "Web_App"
+      ],
+      "dateAdded": "2025-02-04"
+    },
+    {
+      "title": "USGS Great Lakes and Coastal Ecosystems Science",
+      "url": "https://apps.usgs.gov/glbeco/gce.html",
+      "description": "USGS resource for Great Lakes and coastal ecosystems research and data.",
+      "tags": [
+        "USGS",
+        "Great_Lakes",
+        "Coastal",
+        "Ecosystems",
+        "Research",
+        "Data_Portal"
+      ],
+      "dateAdded": "2025-02-04"
+    },
+    {
+      "title": "WorldPop",
+      "url": "https://www.worldpop.org/",
+      "description": "Global population distribution data and demographic statistics.",
+      "tags": [
+        "Population_Data",
+        "Demographics",
+        "Global_Data",
+        "Spatial_Data",
+        "Open_Data"
+      ],
+      "dateAdded": "2025-02-04"
+    },
+    {
+      "title": "Arctic SDI Geoportal",
+      "url": "https://geoportal.arctic-sdi.org/",
+      "description": "Spatial data infrastructure for Arctic region mapping and monitoring.",
+      "tags": [
+        "Arctic",
+        "GIS",
+        "Spatial_Data",
+        "Mapping",
+        "Geoportal",
+        "SDI"
       ],
       "dateAdded": "2025-02-04"
     }
@@ -412,6 +538,19 @@
         "Coastal"
       ],
       "dateAdded": "2025-02-04"
+    },
+    {
+      "title": "Arctic Coastal Dynamics Database",
+      "url": "https://arcticdata.io/catalog/view/doi:10.18739%2FA21J97929",
+      "description": "Comprehensive dataset of Arctic coastal dynamics and changes.",
+      "tags": [
+        "Arctic",
+        "Coastal",
+        "Database",
+        "Environmental_Data",
+        "Time_Series"
+      ],
+      "dateAdded": "2025-02-04"
     }
   ],
   "presentations": [
@@ -432,14 +571,14 @@
     }
   ],
   "metadata": {
-    "lastUpdated": "2025-02-04T16:28:01+01:00",
+    "lastUpdated": "2025-02-04T22:58:41+01:00",
     "counts": {
       "repositories": 6,
-      "papers": 22,
-      "websites": 3,
+      "papers": 19,
+      "websites": 6,
       "courses": 2,
       "books": 1,
-      "datasets": 2,
+      "datasets": 3,
       "presentations": 1
     }
   }
