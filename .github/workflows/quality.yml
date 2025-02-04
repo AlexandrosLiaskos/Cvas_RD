@@ -1,0 +1,54 @@
+name: Code Quality
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install flake8 black isort
+          pip install -r requirements.txt
+
+      - name: Check code formatting with Black
+        run: black --check .
+
+      - name: Sort imports with isort
+        run: isort --check-only --diff .
+
+      - name: Lint with flake8
+        run: flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+
+      - name: Validate HTML
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y tidy
+          for file in *.html; do
+            echo "Validating $file..."
+            tidy -q -e "$file" || true
+          done
+
+      - name: Check JavaScript syntax
+        run: |
+          sudo apt-get install -y node-jshint
+          jshint *.js || true
+
+      - name: Validate CSS
+        run: |
+          sudo npm install -g stylelint stylelint-config-standard
+          echo '{"extends": "stylelint-config-standard"}' > .stylelintrc.json
+          npx stylelint "*.css" || true
