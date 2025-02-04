@@ -6,10 +6,24 @@
     <title>CVAS Resource Database</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="auth.css">
     <!-- Fuse.js for fuzzy search -->
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
 </head>
 <body>
+    <!-- Auth Modal -->
+    <div id="authModal" class="auth-modal">
+        <div class="auth-container">
+            <h2 class="auth-title">CVAS Resource Database</h2>
+            <form id="authForm" class="auth-form">
+                <input type="password" id="password" class="auth-input" placeholder="Enter Password" required>
+                <button type="submit" class="auth-button">Access Database</button>
+                <div id="authError" class="auth-error"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Content -->
     <div class="container">
         <div class="top-bar">
             <div class="search-container">
@@ -28,6 +42,8 @@
             </div>
         </div>
     </div>
+
+    <script src="auth.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
