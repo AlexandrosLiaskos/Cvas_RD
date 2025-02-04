@@ -16,18 +16,26 @@
             position: relative;
         }
 
+        /* Tag container position context */
+        .tag-container {
+            position: relative;
+        }
+
         /* Autocomplete styles */
         .autocomplete-dropdown {
             position: absolute;
+            top: 100%; /* Position right below the tag container */
+            left: 0;
+            right: 0;
             background-color: var(--bg-color);
             border: 1px solid var(--border-color);
             border-radius: 4px;
             max-height: 200px;
             overflow-y: auto;
-            width: calc(100% - 2rem);
             z-index: 1000;
             display: none;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            margin-top: 4px; /* Small gap between container and dropdown */
         }
 
         .autocomplete-item {
