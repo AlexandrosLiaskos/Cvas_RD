@@ -127,6 +127,7 @@
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
+                        'Accept': 'application/json'
                     },
                     body: JSON.stringify({ password })
                 });
@@ -137,12 +138,14 @@
                     sessionStorage.setItem('authToken', data.token);
                     window.location.href = 'add-resource.html';
                 } else {
+                    const error = await response.json();
+                    errorMessage.textContent = error.detail || 'Invalid password';
                     errorMessage.style.display = 'block';
                     form.reset();
                 }
             } catch (error) {
                 console.error('Auth error:', error);
-                errorMessage.textContent = 'Authentication error occurred';
+                errorMessage.textContent = 'Authentication error: ' + error.message;
                 errorMessage.style.display = 'block';
             }
         });
@@ -153,6 +156,13 @@
                 window.close();
             }
         });
+
+        // Add debug logging
+        console.log('Auth page loaded');
+        window.onerror = function(msg, url, lineNo, columnNo, error) {
+            console.error('Error: ' + msg + '\nURL: ' + url + '\nLine: ' + lineNo + '\nColumn: ' + columnNo + '\nError object: ' + JSON.stringify(error));
+            return false;
+        };
     </script>
 </body>
 </html>
