@@ -9,9 +9,9 @@ import hmac
 import time
 
 # These would be set as environment variables in GitHub
-ADMIN_PASSWORD = os.getenv('ADMIN_PASSWORD', 'default_password')  # Change in production
-JWT_SECRET = os.getenv('JWT_SECRET', 'your-secret-key')  # Change in production
-GITHUB_TOKEN = os.getenv('GITHUB_TOKEN')
+ADMIN_PASSWORD = os.getenv('CVAS_ADMIN_PASSWORD', 'default_password')  # Change in production
+JWT_SECRET = os.getenv('CVAS_JWT_SECRET', 'your-secret-key')  # Change in production
+GITHUB_PAT = os.getenv('CVAS_GITHUB_PAT')  # Personal Access Token
 GITHUB_REPO = "AlexandrosLiaskos/Cvas_RD"
 
 class DatabaseHandler(SimpleHTTPRequestHandler):
@@ -89,9 +89,9 @@ class DatabaseHandler(SimpleHTTPRequestHandler):
                     json.dump(resources, f, indent=2)
 
                 # Push to GitHub if token is available
-                if GITHUB_TOKEN:
+                if GITHUB_PAT:
                     try:
-                        g = Github(GITHUB_TOKEN)
+                        g = Github(GITHUB_PAT)
                         repo = g.get_repo(GITHUB_REPO)
                         
                         # Get the current file content
