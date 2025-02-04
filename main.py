@@ -6,6 +6,7 @@ from typing import Dict, Optional
 import jwt
 from fastapi import FastAPI, HTTPException, Depends, Header
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 from github import Github
 from pydantic import BaseModel
 
@@ -50,14 +51,19 @@ async def verify_token(authorization: Optional[str] = Header(None)):
 
 @app.post("/api/auth")
 async def authenticate(auth_request: AuthRequest):
-    if auth_request.password == ADMIN_PASSWORD:
-        token = jwt.encode(
-            {"exp": datetime.now().timestamp() + 3600},  # 1 hour expiration
-            JWT_SECRET,
-            algorithm="HS256"
-        )
-        return {"token": token}
-    raise HTTPException(status_code=401, detail="Invalid password")
+    print(f"Received auth request")  # Debug log
+    try:
+        if auth_request.password == ADMIN_PASSWORD:
+            token = jwt.encode(
+                {"exp": datetime.now().timestamp() + 3600},  # 1 hour expiration
+                JWT_SECRET,
+                algorithm="HS256"
+            )
+            return JSONResponse(content={"token": token})
+        raise HTTPException(status_code=401, detail="Invalid password")
+    except Exception as e:
+        print(f"Auth error: {str(e)}")  # Debug log
+        raise HTTPException(status_code=500, detail=str(e))
 
 @app.post("/api/add-resource")
 async def add_resource(resource: ResourceEntry, token: str = Depends(verify_token)):
@@ -98,11 +104,16 @@ async def add_resource(resource: ResourceEntry, token: str = Depends(verify_toke
                 print(f"GitHub sync error: {e}")
                 # Continue even if GitHub sync fails
 
-        return {"status": "success"}
+        return JSONResponse(content={"status": "success"})
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
 # For Railway deployment health check
 @app.get("/")
 async def root():
-    return {"status": "ok", "message": "CVAS API is running"}
+    return JSONResponse(content={"status": "ok", "message": "CVAS API is running"})
+
+# Add an options endpoint to handle preflight requests
+@app.options("/api/auth")
+async def auth_options():
+    return JSONResponse(content={})
