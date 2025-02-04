@@ -123,7 +123,7 @@
             const password = document.getElementById('password').value;
 
             try {
-                const response = await fetch('/api/auth', {
+                const response = await fetch('https://web-production-e7ae4.up.railway.app/api/auth', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
