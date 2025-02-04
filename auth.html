@@ -72,17 +72,6 @@
             display: none;
         }
 
-        .loading {
-            display: none;
-            text-align: center;
-            margin-top: 1rem;
-            color: var(--text-muted);
-        }
-
-        .loading.visible {
-            display: block;
-        }
-
         .close-button {
             position: absolute;
             top: 1rem;
@@ -107,19 +96,15 @@
             background-color: rgba(255, 68, 68, 0.1);
         }
 
-        #debugInfo {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 1rem;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: #fff;
-            font-family: monospace;
-            font-size: 12px;
-            max-height: 200px;
-            overflow-y: auto;
+        .loading {
             display: none;
+            text-align: center;
+            margin-top: 1rem;
+            color: var(--text-muted);
+        }
+
+        .loading.visible {
+            display: block;
         }
     </style>
 </head>
@@ -128,45 +113,28 @@
         <button class="close-button" onclick="window.close()">×</button>
         <h2 class="auth-title">Authentication Required</h2>
         <form id="authForm" class="auth-form">
-            <input type="password" id="password" class="auth-input" placeholder="Enter password" required>
+            <input type="password" id="password" class="auth-input" placeholder="Enter password" required 
+                   autocomplete="current-password">
             <button type="submit" class="auth-button">Authenticate</button>
             <div id="loading" class="loading">Authenticating...</div>
         </form>
-        <div id="errorMessage" class="error-message">Invalid password</div>
+        <div id="errorMessage" class="error-message"></div>
     </div>
-    <div id="debugInfo"></div>
 
     <script>
         const form = document.getElementById('authForm');
         const errorMessage = document.getElementById('errorMessage');
         const loading = document.getElementById('loading');
         const submitButton = form.querySelector('button[type="submit"]');
-        const debugInfo = document.getElementById('debugInfo');
 
-        // Debug logging
-        function logDebug(message, data = null) {
-            const timestamp = new Date().toISOString();
-            const logMessage = `${timestamp} - ${message}`;
-            console.log(logMessage, data || '');
-            
-            if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
-                debugInfo.style.display = 'block';
-                const logEntry = document.createElement('div');
-                logEntry.textContent = `${logMessage} ${data ? JSON.stringify(data) : ''}`;
-                debugInfo.appendChild(logEntry);
-                debugInfo.scrollTop = debugInfo.scrollHeight;
-            }
-        }
-
-        // Show/hide loading state
         function setLoading(isLoading) {
             loading.classList.toggle('visible', isLoading);
             submitButton.disabled = isLoading;
             submitButton.textContent = isLoading ? 'Authenticating...' : 'Authenticate';
         }
 
-        // Show error message
         function showError(message) {
+            console.error('Error:', message);
             errorMessage.textContent = message;
             errorMessage.style.display = 'block';
             setTimeout(() => {
@@ -174,14 +142,10 @@
             }, 5000);
         }
 
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const password = document.getElementById('password').value;
-
+        async function authenticate(password) {
             try {
-                setLoading(true);
-                logDebug('Sending authentication request...');
-
+                console.log('Sending authentication request...');
+                
                 const response = await fetch('https://web-production-e7ae4.up.railway.app/api/auth', {
                     method: 'POST',
                     headers: {
@@ -191,35 +155,45 @@
                     body: JSON.stringify({ password })
                 });
 
-                logDebug('Response received:', {
-                    status: response.status,
-                    statusText: response.statusText,
-                    headers: Object.fromEntries(response.headers.entries())
-                });
+                console.log('Response status:', response.status);
+                console.log('Response headers:', Object.fromEntries(response.headers.entries()));
+
+                const responseText = await response.text();
+                console.log('Raw response:', responseText);
 
                 let data;
-                const responseText = await response.text();
-                logDebug('Raw response:', responseText);
-
                 try {
                     data = JSON.parse(responseText);
-                } catch (parseError) {
-                    logDebug('JSON parse error:', parseError);
-                    throw new Error('Invalid response format from server');
+                } catch (e) {
+                    console.error('Failed to parse response:', e);
+                    throw new Error('Server returned invalid response');
                 }
 
                 if (response.ok && data.token) {
-                    logDebug('Authentication successful');
+                    console.log('Authentication successful');
                     sessionStorage.setItem('authToken', data.token);
                     window.location.href = 'add-resource.html';
-                } else {
-                    logDebug('Authentication failed:', data);
-                    showError(data.detail || 'Authentication failed');
-                    form.reset();
+                    return;
                 }
+
+                // Handle error response
+                const errorMessage = data.detail || 'Authentication failed';
+                throw new Error(errorMessage);
             } catch (error) {
-                logDebug('Authentication error:', error);
-                showError('Authentication error: ' + error.message);
+                throw error;
+            }
+        }
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const password = document.getElementById('password').value;
+
+            try {
+                setLoading(true);
+                await authenticate(password);
+            } catch (error) {
+                showError(error.message);
+                form.reset();
             } finally {
                 setLoading(false);
             }
@@ -235,7 +209,6 @@
         // Focus password field on load
         window.addEventListener('load', () => {
             document.getElementById('password').focus();
-            logDebug('Auth page loaded');
         });
     </script>
 </body>

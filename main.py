@@ -4,7 +4,7 @@ import os
 from typing import Dict, Optional
 
 import jwt
-from fastapi import FastAPI, HTTPException, Depends, Header
+from fastapi import FastAPI, HTTPException, Depends, Header, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from github import Github
@@ -15,7 +15,7 @@ app = FastAPI()
 # CORS configuration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # In production, replace with your frontend domain
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -35,7 +35,36 @@ class ResourceEntry(BaseModel):
     category: str
     entry: Dict
 
-# Authentication dependency
+@app.exception_handler(Exception)
+async def global_exception_handler(request: Request, exc: Exception):
+    return JSONResponse(
+        status_code=500,
+        content={"detail": str(exc)}
+    )
+
+@app.post("/api/auth")
+async def authenticate(auth_request: AuthRequest):
+    try:
+        if auth_request.password == ADMIN_PASSWORD:
+            token = jwt.encode(
+                {"exp": datetime.now().timestamp() + 3600},  # 1 hour expiration
+                JWT_SECRET,
+                algorithm="HS256"
+            )
+            return JSONResponse(
+                content={"token": token},
+                status_code=200
+            )
+        return JSONResponse(
+            content={"detail": "Invalid password"},
+            status_code=401
+        )
+    except Exception as e:
+        return JSONResponse(
+            content={"detail": str(e)},
+            status_code=500
+        )
+
 async def verify_token(authorization: Optional[str] = Header(None)):
     if not authorization or not authorization.startswith("Bearer "):
         raise HTTPException(status_code=401, detail="Invalid authorization header")
@@ -48,22 +77,6 @@ async def verify_token(authorization: Optional[str] = Header(None)):
     except jwt.InvalidTokenError:
         raise HTTPException(status_code=401, detail="Invalid token")
     return token
-
-@app.post("/api/auth")
-async def authenticate(auth_request: AuthRequest):
-    print(f"Received auth request")  # Debug log
-    try:
-        if auth_request.password == ADMIN_PASSWORD:
-            token = jwt.encode(
-                {"exp": datetime.now().timestamp() + 3600},  # 1 hour expiration
-                JWT_SECRET,
-                algorithm="HS256"
-            )
-            return JSONResponse(content={"token": token})
-        raise HTTPException(status_code=401, detail="Invalid password")
-    except Exception as e:
-        print(f"Auth error: {str(e)}")  # Debug log
-        raise HTTPException(status_code=500, detail=str(e))
 
 @app.post("/api/add-resource")
 async def add_resource(resource: ResourceEntry, token: str = Depends(verify_token)):
@@ -104,16 +117,26 @@ async def add_resource(resource: ResourceEntry, token: str = Depends(verify_toke
                 print(f"GitHub sync error: {e}")
                 # Continue even if GitHub sync fails
 
-        return JSONResponse(content={"status": "success"})
+        return JSONResponse(
+            content={"status": "success"},
+            status_code=200
+        )
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        return JSONResponse(
+            content={"detail": str(e)},
+            status_code=500
+        )
 
-# For Railway deployment health check
 @app.get("/")
 async def root():
-    return JSONResponse(content={"status": "ok", "message": "CVAS API is running"})
+    return JSONResponse(
+        content={"status": "ok", "message": "CVAS API is running"},
+        status_code=200
+    )
 
-# Add an options endpoint to handle preflight requests
 @app.options("/api/auth")
 async def auth_options():
-    return JSONResponse(content={})
+    return JSONResponse(
+        content={},
+        status_code=200
+    )
