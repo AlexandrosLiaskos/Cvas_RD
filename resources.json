@@ -97,7 +97,7 @@
   ],
   "papers": [
     {
-      "title": "Extraction of Coastlines with Fuzzy Approach Using Sentinel-1 SAR Image",
+      "title": "Extraction of Coastlines from Sentinel-1 SAR Images Using Fuzzy Approach",
       "url": "https://isprs-archives.copernicus.org/articles/XLI-B7/747/2016/",
       "doi": "10.5194/isprsarchives-XLI-B7-747-2016",
       "abstract": "Coastlines are important features for water resources, sea products, energy resources etc. Coastlines are changed dynamically, thus automated methods are necessary for analysing and detecting the changes along the coastlines. In this study, Sentinel-1 C band SAR image has been used to extract the coastline with fuzzy logic approach. The used SAR image has VH polarisation and 10x10m. spatial resolution, covers 57 sqkm area from the south-east of Puerto-Rico. Additionally, radiometric calibration is applied to reduce atmospheric and orbit error, and speckle filter is used to reduce the noise. Then the image is terrain-corrected using SRTM digital surface model. Classification of SAR image is a challenging task since SAR and optical sensors have very different properties. Even between different bands of the SAR sensors, the images look very different. So, the classification of SAR image is difficult with the traditional unsupervised methods. In this study, a fuzzy approach has been applied to distinguish the coastal pixels than the land surface pixels. The standard deviation and the mean, median values are calculated to use as parameters in fuzzy approach. The Mean-standard-deviation (MS) Large membership function is used because the large amounts of land and ocean pixels dominate the SAR image with large mean and standard deviation values. The pixel values are multiplied with 1000 to easify the calculations. The mean is calculated as 23 and the standard deviation is calculated as 12 for the whole image. The multiplier parameters are selected as a: 0.58, b: 0.05 to maximize the land surface membership. The result is evaluated using airborne LIDAR data, only for the areas where LIDAR dataset is available and secondly manually digitized coastline. The laser points which are below 0,5 m are classified as the ocean points. The 3D alpha-shapes algorithm is used to detect the coastline points from LIDAR data. Minimum distances are calculated between the LIDAR points of coastline with the extracted coastline. The statistics of the distances are calculated as following; the mean is 5.82m, standard deviation is 5.83m and the median value is 4.08 m. Secondly, the extracted coastline is also evaluated with manually created lines on SAR image. Both lines are converted to dense points with 1 m interval. Then the closest distances are calculated between the points from extracted coastline and manually created coastline. The mean is 5.23m, standard deviation is 4.52m. and the median value is 4.13m for the calculated distances. The evaluation values are within the accuracy of used SAR data for both quality assessment approaches.",
@@ -131,7 +131,7 @@
       "journal": "Environmental Modelling & Software"
     },
     {
-      "title": "Earth's Surface Water Change Over the Past 30 Years: A Global Perspective",
+      "title": "Long-term Global Surface Water Change Analysis Using Satellite Data",
       "url": "https://doi.org/10.1038/nclimate3111",
       "doi": "10.1038/nclimate3111",
       "abstract": "Global-scale assessments of surface water dynamics using the Google Earth Engine platform, demonstrating methods for analyzing long-term changes in water bodies and coastlines.",
@@ -148,7 +148,7 @@
       "journal": "Nature Climate Change"
     },
     {
-      "title": "Google Earth Engine Cloud Computing Platform for Remote Sensing Big Data Applications: A Comprehensive Review",
+      "title": "Google Earth Engine for Large-Scale Remote Sensing: A Comprehensive Review",
       "url": "https://doi.org/10.1109/JSTARS.2020.3021052",
       "doi": "10.1109/JSTARS.2020.3021052",
       "abstract": "A comprehensive review of GEE capabilities, best practices, and optimization techniques for processing large-scale earth observation data.",
@@ -165,7 +165,7 @@
       "journal": "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing"
     },
     {
-      "title": "High-Resolution Mapping of Global Surface Water and its Long-Term Changes",
+      "title": "High-Resolution Global Surface Water Change Mapping Using Multi-Temporal Satellite Data",
       "url": "https://doi.org/10.1038/nature20584",
       "doi": "10.1038/nature20584",
       "abstract": "Study utilizing GEE for mapping surface water dynamics globally, including coastal areas and sea level impacts, with efficient processing of over 3 million Landsat scenes.",
@@ -200,7 +200,7 @@
       "journal": "GEOMATE Journal"
     },
     {
-      "title": "Global Temperature Change Attributable to Human Activity Before and After the Paris Agreement",
+      "title": "Anthropogenic Influence on Global Temperature Changes Before and After the Paris Agreement",
       "url": "https://www.nature.com/articles/s41558-022-01281-0",
       "doi": "10.1038/s41558-022-01281-0",
       "year": 2022,
@@ -218,7 +218,7 @@
       "journal": "Nature Climate Change"
     },
     {
-      "title": "Long-Term Shoreline Change along the Eastern Coast of Peninsular Malaysia Using Satellite Images",
+      "title": "Multi-Temporal Analysis of Shoreline Changes Along the Eastern Coast of Peninsular Malaysia",
       "url": "https://www.mdpi.com/2077-1312/10/11/1602",
       "doi": "10.3390/jmse10111602",
       "year": 2022,
@@ -235,7 +235,7 @@
       "journal": "Journal of Marine Science and Engineering"
     },
     {
-      "title": "Cliff Erosion Patterns and Rates along the California Coast from Repeat Aerial Photogrammetry and Airborne Lidar",
+      "title": "Cliff Erosion Patterns and Rates Along the California Coast: A Combined Aerial Photogrammetry and LiDAR Analysis",
       "url": "https://esurf.copernicus.org/articles/12/1049/2024/",
       "doi": "10.5194/esurf-12-1049-2024",
       "year": 2024,
@@ -252,7 +252,7 @@
       "journal": "Earth Surface Dynamics"
     },
     {
-      "title": "Deep Learning Applications for Coastal Change Detection Using Historical Aerial Imagery in Alaska",
+      "title": "Deep Learning for Coastal Change Detection Using Historical Aerial Imagery in Alaska",
       "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024EF005013",
       "doi": "10.1029/2024EF005013",
       "year": 2024,
@@ -270,7 +270,7 @@
       "journal": "Earth's Future"
     },
     {
-      "title": "Sea-Level Rise Projections for the 21st Century Exceed IPCC Estimates Under Strong Warming Scenarios",
+      "title": "Twenty-First Century Sea-Level Rise Could Exceed IPCC Projections for Strong-Warming Future Scenarios",
       "url": "https://www.pnas.org/doi/10.1073/pnas.2409411121",
       "doi": "10.1073/pnas.2409411121",
       "year": 2024,
@@ -288,7 +288,7 @@
       "journal": "Proceedings of the National Academy of Sciences"
     },
     {
-      "title": "Global Ice Loss Driven by Climate Change: A Comprehensive Analysis of Continental-Scale Changes",
+      "title": "Global Ice Loss Patterns Under Climate Change: A Continental-Scale Analysis",
       "url": "https://www.sciencedirect.com/science/article/pii/S0048969724005242",
       "doi": "10.1016/j.scitotenv.2024.168747",
       "year": 2024,
@@ -300,10 +300,10 @@
         "Remote_sensing"
       ],
       "dateAdded": "2025-02-04",
-      "journal": "Science of The Total Environment"
+      "journal": "Science of the Total Environment"
     },
     {
-      "title": "Extreme Arctic Rain Events Trigger Widespread Winter Warming: Implications for Climate Change",
+      "title": "Extreme Arctic Rain Events and Their Impact on Winter Temperature Patterns",
       "url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024GL108622",
       "doi": "10.1029/2024GL108622",
       "year": 2024,
@@ -318,7 +318,7 @@
       "journal": "Geophysical Research Letters"
     },
     {
-      "title": "Machine Learning Enables Rapid Assessment of Coral Reef Change at Ecosystem Scales",
+      "title": "Machine Learning Accelerates Detection and Analysis of Coral Reef Changes",
       "url": "https://www.nature.com/articles/s41558-024-02074-3",
       "doi": "10.1038/s41558-024-02074-3",
       "year": 2024,
@@ -336,7 +336,7 @@
       "journal": "Nature Climate Change"
     },
     {
-      "title": "Semi-Automated Feature Extraction for Arctic Coastal Change Analysis Using Remote Sensing",
+      "title": "Semi-Automated Feature Extraction from Arctic Coastal Imagery Using Remote Sensing Techniques",
       "url": "https://www.tandfonline.com/doi/full/10.1080/07038992.2017.1370367",
       "doi": "10.1080/07038992.2017.1370367",
       "year": 2017,
@@ -354,7 +354,7 @@
       "journal": "Canadian Journal of Remote Sensing"
     },
     {
-      "title": "Semi-Automated Coastline Mapping Using Google Earth Engine and Sentinel-2 Imagery",
+      "title": "Semi-Automated Coastline Extraction and Analysis Using Machine Learning and Earth Observation Data",
       "url": "https://doi.org/10.3390/earth5040033",
       "doi": "10.3390/earth5040033",
       "year": 2024,
@@ -369,7 +369,7 @@
       "journal": "Earth"
     },
     {
-      "title": "Automated Detection and Analysis of Storm-Induced Coastal Change Using Remote Sensing",
+      "title": "Remote Sensing-Based Detection and Analysis of Coastal Storm Events",
       "url": "https://doi.org/10.3390/jmse11010023",
       "doi": "10.3390/jmse11010023",
       "year": 2023,
@@ -387,7 +387,7 @@
       "journal": "Journal of Marine Science and Engineering"
     },
     {
-      "title": "Geospatial Analysis of Long-Term Coastal Morphological Changes Using Remote Sensing and GIS",
+      "title": "Geospatial Analysis of Coastal Morphological Changes: A Multi-Temporal Remote Sensing Approach",
       "url": "https://doi.org/10.3390/geographies3030027",
       "doi": "10.3390/geographies3030027",
       "year": 2023,
@@ -405,7 +405,7 @@
       "journal": "Geographies"
     },
     {
-      "title": "Satellite-Based Monitoring of Coastal Ecosystem Dynamics",
+      "title": "Automated Monitoring of Coastal Ecosystems Using Multi-Source Satellite Data",
       "url": "https://doi.org/10.1016/j.apgeog.2022.102710",
       "doi": "10.1016/j.apgeog.2022.102710",
       "year": 2022,
@@ -423,7 +423,7 @@
       "journal": "Applied Geography"
     },
     {
-      "title": "Environmental Engineering Applications in Coastal Zones: Current Practices and Future Directions",
+      "title": "Sustainable Environmental Engineering Solutions for Coastal Zone Management",
       "url": "https://doi.org/10.1007/s40710-022-00577-9",
       "doi": "10.1007/s40710-022-00577-9",
       "year": 2022,
@@ -441,7 +441,7 @@
       "journal": "Environmental Engineering Research"
     },
     {
-      "title": "Earth Surface Processes in Coastal Areas: A Multi-Method Analysis",
+      "title": "Earth Surface Process Analysis in Coastal Areas: A Multi-Method Assessment",
       "url": "https://doi.org/10.1088/1755-1315/989/1/012014",
       "doi": "10.1088/1755-1315/989/1/012014",
       "year": 2022,
@@ -459,7 +459,7 @@
       "journal": "IOP Conference Series: Earth and Environmental Science"
     },
     {
-      "title": "Coastal Erosion Patterns and Rates Along Major Coastlines: A Global Assessment Using Remote Sensing",
+      "title": "Global Assessment of Coastal Erosion Patterns Using Remote Sensing Time Series",
       "url": "https://doi.org/10.1038/s41598-022-26374-w",
       "doi": "10.1038/s41598-022-26374-w",
       "year": 2022,
@@ -477,7 +477,7 @@
       "journal": "Scientific Reports"
     },
     {
-      "title": "Advances in Marine Science and Coastal Engineering: A Review of Recent Developments",
+      "title": "Recent Advances in Marine Science and Coastal Engineering: A Systematic Review",
       "url": "https://doi.org/10.3390/jmse10111673",
       "doi": "10.3390/jmse10111673",
       "year": 2022,
@@ -494,7 +494,7 @@
       "journal": "Journal of Marine Science and Engineering"
     },
     {
-      "title": "Integration of Coastal Management Strategies for Climate Change Adaptation",
+      "title": "Integrating Climate Change Adaptation into Coastal Management Strategies",
       "url": "https://doi.org/10.1038/s41598-020-77926-x",
       "doi": "10.1038/s41598-020-77926-x",
       "year": 2020,
@@ -512,7 +512,7 @@
       "journal": "Scientific Reports"
     },
     {
-      "title": "Geoscientific Approaches to Coastal Zone Management and Evolution",
+      "title": "Geoscientific Approaches to Coastal Zone Evolution and Management",
       "url": "https://doi.org/10.3390/geosciences9050219",
       "doi": "10.3390/geosciences9050219",
       "year": 2019,
@@ -530,7 +530,7 @@
       "journal": "Geosciences"
     },
     {
-      "title": "Multi-decadal Analysis of Coastal Change Using Remote Sensing",
+      "title": "Multi-Decadal Analysis of Coastal Change Using Remote Sensing: A Global Assessment",
       "url": "https://doi.org/10.1038/s41467-019-10347-1",
       "doi": "10.1038/s41467-019-10347-1",
       "year": 2019,
@@ -543,7 +543,7 @@
       "journal": "Nature Communications"
     },
     {
-      "title": "Water Resources Management and Research in Coastal Environments",
+      "title": "Water Resources Management in Coastal Environments: A Comprehensive Review",
       "url": "https://doi.org/10.3390/w10091218",
       "doi": "10.3390/w10091218",
       "year": 2018,
@@ -561,7 +561,7 @@
       "journal": "Water"
     },
     {
-      "title": "Meteorological Applications in Coastal Zone Management",
+      "title": "Meteorological Applications for Coastal Zone Management and Planning",
       "url": "https://doi.org/10.1002/met.1585",
       "doi": "10.1002/met.1585",
       "year": 2017,
@@ -578,7 +578,7 @@
       "journal": "Meteorological Applications"
     },
     {
-      "title": "Ocean and Coastal Management: An Integrated Approach",
+      "title": "Integrated Approaches to Ocean and Coastal Management: A Systematic Review",
       "url": "https://doi.org/10.1016/j.ocecoaman.2014.12.011",
       "doi": "10.1016/j.ocecoaman.2014.12.011",
       "year": 2014,
@@ -596,7 +596,7 @@
       "journal": "Ocean & Coastal Management"
     },
     {
-      "title": "Environmental Hazards Assessment in Coastal Regions: A Risk-Based Approach",
+      "title": "Risk-Based Assessment of Environmental Hazards in Coastal Regions",
       "url": "https://doi.org/10.3763/ehaz.2010.0052",
       "doi": "10.3763/ehaz.2010.0052",
       "year": 2010,
@@ -818,7 +818,7 @@
     }
   ],
   "metadata": {
-    "lastUpdated": "2025-02-04T23:10:43+01:00",
+    "lastUpdated": "2025-02-05T00:48:21+01:00",
     "counts": {
       "papers": 30,
       "websites": 6,
