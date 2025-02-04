@@ -2,9 +2,15 @@ name: Code Checks
 
 on:
   push:
-    branches: [ main ]
+    paths:
+      - '*.html'
+      - '*.js'
+      - '*.css'
   pull_request:
-    branches: [ main ]
+    paths:
+      - '*.html'
+      - '*.js'
+      - '*.css'
   workflow_dispatch:
 
 jobs:
@@ -29,13 +35,13 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Check JavaScript syntax
+      - name: Check JavaScript
         run: |
           npm init -y
           npm install eslint --save-dev
           npx eslint --init || true
           for file in *.js; do
-            if [ -f "$file" ]; then
+            if [ -f "$file" ] && [ "$file" != "validate.js" ]; then
               echo "Validating $file..."
               npx eslint "$file" || true
             fi

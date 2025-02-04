@@ -3,7 +3,7 @@ name: Backup Resources
 on:
   schedule:
     - cron: '0 0 * * *'  # Run daily at midnight
-  workflow_dispatch:  # Allow manual trigger
+  workflow_dispatch:
 
 jobs:
   backup:
@@ -20,7 +20,7 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add backups/
-          git commit -m "Automated backup: $(date +%Y-%m-%d)" || echo "No changes to commit"
+          git commit -m "📦 Backup: $(date +%Y-%m-%d)" || echo "No changes to commit"
           git push
 
       - name: Cleanup old backups

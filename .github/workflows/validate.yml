@@ -1,4 +1,4 @@
-name: Validate Resources
+name: Validate JSON
 
 on:
   push:
@@ -15,92 +15,49 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
-
-      - name: Install dependencies
+      - name: Validate JSON structure
         run: |
-          python -m pip install --upgrade pip
-          pip install jsonschema
+          cat > validate.js <<'EOF'
+          const fs = require('fs');
 
-      - name: Validate JSON Schema
-        run: |
-          python - <<EOF
-          import json
-          import jsonschema
-          from datetime import datetime
+          // Read resources.json
+          const data = JSON.parse(fs.readFileSync('resources.json', 'utf8'));
 
-          # Define the schema
-          schema = {
-              "type": "object",
-              "required": ["repositories", "papers", "websites", "courses", "books", "datasets", "presentations", "metadata"],
-              "properties": {
-                  "repositories": {
-                      "type": "array",
-                      "items": {
-                          "type": "object",
-                          "required": ["title", "url", "tags", "dateAdded"],
-                          "properties": {
-                              "title": {"type": "string"},
-                              "url": {
-                                  "oneOf": [
-                                      {"type": "string"},
-                                      {"type": "array", "items": {"type": "string"}}
-                                  ]
-                              },
-                              "description": {"type": "string"},
-                              "tags": {
-                                  "type": "array",
-                                  "items": {"type": "string"}
-                              },
-                              "dateAdded": {
-                                  "type": "string",
-                                  "pattern": "^\d{4}-\d{2}-\d{2}$"
-                              }
-                          }
-                      }
-                  },
-                  "papers": {"type": "array"},
-                  "websites": {"type": "array"},
-                  "courses": {"type": "array"},
-                  "books": {"type": "array"},
-                  "datasets": {"type": "array"},
-                  "presentations": {"type": "array"},
-                  "metadata": {
-                      "type": "object",
-                      "required": ["lastUpdated", "counts"],
-                      "properties": {
-                          "lastUpdated": {"type": "string"},
-                          "counts": {
-                              "type": "object",
-                              "properties": {
-                                  "repositories": {"type": "number"},
-                                  "papers": {"type": "number"},
-                                  "websites": {"type": "number"},
-                                  "courses": {"type": "number"},
-                                  "books": {"type": "number"},
-                                  "datasets": {"type": "number"},
-                                  "presentations": {"type": "number"}
-                              }
-                          }
-                      }
-                  }
+          // Check required top-level keys
+          const requiredKeys = ['repositories', 'papers', 'websites', 'courses', 
+                              'books', 'datasets', 'presentations', 'metadata'];
+          requiredKeys.forEach(key => {
+            if (!data[key]) throw new Error(`Missing required key: ${key}`);
+          });
+
+          // Validate metadata
+          if (!data.metadata.lastUpdated) throw new Error('Missing metadata.lastUpdated');
+          if (!data.metadata.counts) throw new Error('Missing metadata.counts');
+
+          // Validate counts
+          const categories = ['repositories', 'papers', 'websites', 'courses', 
+                            'books', 'datasets', 'presentations'];
+          categories.forEach(category => {
+            const actualCount = data[category].length;
+            const storedCount = data.metadata.counts[category];
+            if (actualCount !== storedCount) {
+              throw new Error(`Count mismatch for ${category}: stored=${storedCount}, actual=${actualCount}`);
+            }
+          });
+
+          // Validate entries
+          categories.forEach(category => {
+            data[category].forEach((item, index) => {
+              if (!item.title) throw new Error(`Missing title in ${category}[${index}]`);
+              if (!item.url) throw new Error(`Missing url in ${category}[${index}]`);
+              if (!item.tags || !Array.isArray(item.tags)) {
+                throw new Error(`Invalid tags in ${category}[${index}]`);
               }
-          }
+              if (!item.dateAdded) throw new Error(`Missing dateAdded in ${category}[${index}]`);
+            });
+          });
 
-          # Load and validate the JSON
-          with open('resources.json', 'r') as f:
-              data = json.load(f)
-              
-          jsonschema.validate(data, schema)
-
-          # Validate counts
-          for category in data['metadata']['counts']:
-              actual_count = len(data.get(category, []))
-              stored_count = data['metadata']['counts'][category]
-              assert actual_count == stored_count, f"Count mismatch for {category}: stored={stored_count}, actual={actual_count}"
-
-          print("✅ JSON validation successful!")
+          console.log('✅ JSON validation successful!');
           EOF
+
+          node validate.js
