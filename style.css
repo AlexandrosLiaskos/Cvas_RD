@@ -449,7 +449,69 @@ body {
     gap: 0.5rem;
 }
 
-.welcome-tags-container .tag {
-    font-size: 0.9rem;
-    padding: 0.3rem 0.6rem;
+/* Media Queries */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .explorer {
+        flex: 0 0 auto;
+        max-height: 50vh;
+    }
+
+    .preview {
+        flex: 1;
+    }
+
+    .container {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .help-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile first padding adjustments */
+@media (max-width: 480px) {
+    .container {
+        padding: 0.5rem;
+    }
+
+    .explorer,
+    .preview {
+        padding: 0.5rem;
+    }
+
+    .preview-container {
+        padding: 0.5rem;
+    }
+
+    .metadata-item {
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .metadata-label {
+        min-width: auto;
+    }
+
+    .tags-container {
+        margin-top: 0.3rem;
+    }
+
+    .top-bar {
+        flex-direction: column;
+    }
+
+    .add-button {
+        width: 100%;
+        justify-content: center;
+    }
 }

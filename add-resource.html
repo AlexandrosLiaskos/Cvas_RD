@@ -45,6 +45,15 @@
             justify-content: space-between;
             align-items: center;
             color: var(--text-color);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .autocomplete-item .item-text {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
 
         .autocomplete-item:hover,
@@ -305,7 +314,7 @@
                 dropdown.innerHTML = currentAutocompleteItems
                     .map((item, index) => `
                         <div class="autocomplete-item" data-index="${index}">
-                            ${highlightMatch(item, searchTerm)}
+                            <span class="item-text">${highlightMatch(item, searchTerm)}</span>
                         </div>
                     `)
                     .join('');
