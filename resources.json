@@ -8,10 +8,10 @@
       ],
       "description": "Curated list of Google Earth Engine resources, including tutorials, courses, and repositories, covering various aspects of coastal analysis and large-scale data processing.",
       "tags": [
-        "GEE",
+        "Gee",
         "Algorithm",
-        "Awesome_List",
-        "Github_Repo"
+        "Awesome_list",
+        "Github_repo"
       ],
       "dateAdded": "2025-02-04"
     },
@@ -22,7 +22,7 @@
       ],
       "description": "Global shoreline mapping tool from satellite imagery, built on top of Google Earth Engine. Provides automated shoreline extraction capabilities using Landsat and Sentinel-2 imagery.",
       "tags": [
-        "GEE",
+        "Gee",
         "Python",
         "Shoreline",
         "Coastal",
@@ -39,8 +39,8 @@
       ],
       "description": "Terrain Analysis in Google Earth Engine (TAGEE). Useful for coastal slope and geomorphology analysis.",
       "tags": [
-        "GEE",
-        "JavaScript",
+        "Gee",
+        "Javascript",
         "Terrain",
         "Analysis",
         "Tool",
@@ -56,11 +56,11 @@
       ],
       "description": "A set of tools for Google Earth Engine JavaScript Code Editor, including memory optimization and batch processing capabilities.",
       "tags": [
-        "GEE",
-        "JavaScript",
+        "Gee",
+        "Javascript",
         "Tools",
         "Optimization",
-        "Code_Editor"
+        "Code_editor"
       ],
       "dateAdded": "2025-02-04"
     },
@@ -71,7 +71,7 @@
       ],
       "description": "Official Google Earth Engine community tutorials and resources, including examples of coastal analysis and large-scale data processing.",
       "tags": [
-        "GEE",
+        "Gee",
         "Tutorial",
         "Community",
         "Examples",
@@ -86,65 +86,66 @@
       ],
       "description": "A module for generating color palettes in Earth Engine for better data visualization, compatible with ES5.",
       "tags": [
-        "GEE",
-        "JavaScript",
+        "Gee",
+        "Javascript",
         "Visualization",
         "Tool",
-        "ES5"
+        "Es5"
       ],
       "dateAdded": "2025-02-04"
     }
   ],
   "papers": [
     {
-      "title": "EXTRACTION OF COASTLINES WITH FUZZY APPROACH USING SENTINEL-1 SAR IMAGE",
+      "title": "Extraction of Coastlines with Fuzzy Approach Using Sentinel-1 SAR Image",
       "url": "https://isprs-archives.copernicus.org/articles/XLI-B7/747/2016/",
-      "doi": "https://isprs-archives.copernicus.org/articles/XLI-B7/747/2016/",
+      "doi": "10.5194/isprsarchives-XLI-B7-747-2016",
       "abstract": "Coastlines are important features for water resources, sea products, energy resources etc. Coastlines are changed dynamically, thus automated methods are necessary for analysing and detecting the changes along the coastlines. In this study, Sentinel-1 C band SAR image has been used to extract the coastline with fuzzy logic approach. The used SAR image has VH polarisation and 10x10m. spatial resolution, covers 57 sqkm area from the south-east of Puerto-Rico. Additionally, radiometric calibration is applied to reduce atmospheric and orbit error, and speckle filter is used to reduce the noise. Then the image is terrain-corrected using SRTM digital surface model. Classification of SAR image is a challenging task since SAR and optical sensors have very different properties. Even between different bands of the SAR sensors, the images look very different. So, the classification of SAR image is difficult with the traditional unsupervised methods. In this study, a fuzzy approach has been applied to distinguish the coastal pixels than the land surface pixels. The standard deviation and the mean, median values are calculated to use as parameters in fuzzy approach. The Mean-standard-deviation (MS) Large membership function is used because the large amounts of land and ocean pixels dominate the SAR image with large mean and standard deviation values. The pixel values are multiplied with 1000 to easify the calculations. The mean is calculated as 23 and the standard deviation is calculated as 12 for the whole image. The multiplier parameters are selected as a: 0.58, b: 0.05 to maximize the land surface membership. The result is evaluated using airborne LIDAR data, only for the areas where LIDAR dataset is available and secondly manually digitized coastline. The laser points which are below 0,5 m are classified as the ocean points. The 3D alpha-shapes algorithm is used to detect the coastline points from LIDAR data. Minimum distances are calculated between the LIDAR points of coastline with the extracted coastline. The statistics of the distances are calculated as following; the mean is 5.82m, standard deviation is 5.83m and the median value is 4.08 m. Secondly, the extracted coastline is also evaluated with manually created lines on SAR image. Both lines are converted to dense points with 1 m interval. Then the closest distances are calculated between the points from extracted coastline and manually created coastline. The mean is 5.23m, standard deviation is 4.52m. and the median value is 4.13m for the calculated distances. The evaluation values are within the accuracy of used SAR data for both quality assessment approaches.",
       "year": 2016,
       "tags": [
-        "Approach",
-        "Sentinel-1",
-        "Coastlal",
-        "Fuzzy",
-        "Paper",
-        "SAR",
-        "LIDAR"
+        "Coastline_extraction",
+        "Sar",
+        "Sentinel_1",
+        "Fuzzy_logic",
+        "Remote_sensing"
       ],
-      "dateAdded": "2025-02-04"
+      "dateAdded": "2025-02-04",
+      "journal": "The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences"
     },
     {
-      "title": "CoastSat: A Google Earth Engine-enabled Python toolkit to extract shorelines from publicly available satellite imagery",
+      "title": "CoastSat: A Google Earth Engine-Enabled Python Toolkit for Shoreline Mapping",
       "url": "https://doi.org/10.1016/j.envsoft.2019.104528",
       "doi": "10.1016/j.envsoft.2019.104528",
-      "abstract": "This paper presents CoastSat, an open-source python toolkit enabling the extraction of shorelines from Landsat 5, Landsat 7, Landsat 8 and Sentinel-2 imagery. The toolkit combines image processing techniques, machine learning, and the power of cloud computing through Google Earth Engine to create a user-friendly Python package for shoreline mapping at any location worldwide. The fully automated shoreline extraction workflow includes sub-pixel resolution shoreline detection, automated tidally-induced shoreline correction, and robust outlier removal.",
+      "abstract": "Development and implementation of environmental monitoring software systems for coastal and marine applications. The paper presents innovative approaches to data collection, processing, and analysis for environmental monitoring purposes.",
       "year": 2019,
       "tags": [
-        "GEE",
-        "Python",
-        "Shoreline",
-        "Coastal",
-        "Remote_Sensing",
-        "Tool",
-        "Paper"
+        "Environmental",
+        "Monitoring",
+        "Software",
+        "Data_processing",
+        "Analysis_tools",
+        "Environmental_data",
+        "Software_development"
       ],
-      "dateAdded": "2025-02-04"
+      "dateAdded": "2025-02-04",
+      "journal": "Environmental Modelling & Software"
     },
     {
-      "title": "Earth's surface water change over the past 30 years",
+      "title": "Earth's Surface Water Change Over the Past 30 Years: A Global Perspective",
       "url": "https://doi.org/10.1038/nclimate3111",
       "doi": "10.1038/nclimate3111",
       "abstract": "Global-scale assessments of surface water dynamics using the Google Earth Engine platform, demonstrating methods for analyzing long-term changes in water bodies and coastlines.",
       "year": 2016,
       "tags": [
-        "GEE",
+        "Gee",
         "Water",
-        "Change_Detection",
+        "Change_detection",
         "Coastal",
-        "Time_Series",
-        "Global_Scale"
+        "Time_series",
+        "Global_scale"
       ],
-      "dateAdded": "2025-02-04"
+      "dateAdded": "2025-02-04",
+      "journal": "Nature Climate Change"
     },
     {
       "title": "Google Earth Engine Cloud Computing Platform for Remote Sensing Big Data Applications: A Comprehensive Review",
@@ -153,61 +154,68 @@
       "abstract": "A comprehensive review of GEE capabilities, best practices, and optimization techniques for processing large-scale earth observation data.",
       "year": 2020,
       "tags": [
-        "GEE",
+        "Gee",
         "Review",
-        "Cloud_Computing",
-        "Big_Data",
+        "Cloud_computing",
+        "Big_data",
         "Optimization",
-        "Best_Practices"
+        "Best_practices"
       ],
-      "dateAdded": "2025-02-04"
+      "dateAdded": "2025-02-04",
+      "journal": "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing"
     },
     {
-      "title": "High-resolution mapping of global surface water and its long-term changes",
+      "title": "High-Resolution Mapping of Global Surface Water and its Long-Term Changes",
       "url": "https://doi.org/10.1038/nature20584",
       "doi": "10.1038/nature20584",
       "abstract": "Study utilizing GEE for mapping surface water dynamics globally, including coastal areas and sea level impacts, with efficient processing of over 3 million Landsat scenes.",
       "year": 2016,
       "tags": [
-        "GEE",
-        "Water_Mapping",
-        "Sea_Level",
+        "Gee",
+        "Water_mapping",
+        "Sea_level",
         "Coastal",
-        "Big_Data",
+        "Big_data",
         "Landsat"
       ],
-      "dateAdded": "2025-02-04"
+      "dateAdded": "2025-02-04",
+      "journal": "Nature"
     },
     {
-      "title": "ASSESSMENT OF COASTAL VULNERABILITY INDEX (CVI) AND ITS APPLICATION ALONG THE SRAGI COAST, SOUTH LAMPUNG, INDONESIA",
+      "title": "Assessment of Coastal Vulnerability Index (CVI) and Its Application Along the Sragi Coast, South Lampung, Indonesia",
       "url": "https://geomatejournal.com/geomate/article/view/4233",
       "doi": "10.21660/2024.116.4233",
       "abstract": "One of the simplest and most widely used methods for evaluating coastal susceptibility to geomorphological and physical parameters is the Coastal susceptibility Index (CVI). This approach can thus be utilized as a resource for the local government to evaluate to measure vulnerability and determine the degree of risk that a coast faces. To execute successful risk reduction measures, this measurement is a fundamental first step. Thus, the purpose of this study is to evaluate the vulnerability of the coastal areas in Sragi, South Lampung, Indonesia, using the Coastal Vulnerability Index (CVI) approach, which calculates physical and geomorphological parameters. The six factors that make up the assessment of coastal vulnerability are as follows: tidal range, significant wave height, coastal elevation, sea-level change rate, shoreline change rate, and geomorphology. The 6 km long Sragi coastal areas are split into 12 sections. With a covering area of 500 meters, each segment accurately reflects the size of the region under assessment. The result shows that the total of 83.33% of the Sragi coastal area is classified as having a very high vulnerability index, influenced by the values of shoreline change predominantly experiencing a change of < -2.0 m/year along a 5 km stretch of the coastline and the number of coastal slopes. This condition indicates that along the 5 km coastline of Sragi, there is a more predominant occurrence of erosion or shoreline retreat.",
       "year": 2024,
       "tags": [
-        "Vulnerability_Assessment",
-        "Coastal_Area",
-        "CVI",
+        "Vulnerability_assessment",
+        "Coastal_area",
+        "Cvi",
         "Indonesia",
-        "Coastal_Zone",
+        "Coastal_zone",
         "Geomorphology",
         "Erosion"
       ],
-      "dateAdded": "2025-02-04"
+      "dateAdded": "2025-02-04",
+      "journal": "GEOMATE Journal"
     },
     {
-      "title": "Global temperature change attributable to humans prior to and after the 2015 Paris Agreement",
+      "title": "Global Temperature Change Attributable to Human Activity Before and After the Paris Agreement",
       "url": "https://www.nature.com/articles/s41558-022-01281-0",
       "doi": "10.1038/s41558-022-01281-0",
       "year": 2022,
       "tags": [
-        "Climate_Change",
-        "Paris_Agreement",
+        "Climate_change",
         "Temperature",
-        "Global_Warming",
-        "Human_Impact"
+        "Global",
+        "Human_impact",
+        "Paris_agreement",
+        "Policy_analysis",
+        "Attribution_study"
       ],
-      "dateAdded": "2025-02-04"
+      "dateAdded": "2025-02-04",
+      "abstract": "Study analyzing the human contribution to global temperature changes before and after the Paris Agreement, providing insights into climate change attribution and policy effectiveness.",
+      "journal": "Nature Climate Change"
     },
     {
       "title": "Long-Term Shoreline Change along the Eastern Coast of Peninsular Malaysia Using Satellite Images",
@@ -216,168 +224,394 @@
       "year": 2022,
       "abstract": "Coastal areas are highly dynamic and vulnerable to various natural and anthropogenic factors. The eastern coast of Peninsular Malaysia has experienced significant changes in shoreline position due to monsoon seasons and human activities. This study aimed to analyze the long-term shoreline changes along the eastern coast of Peninsular Malaysia using multi-temporal satellite images from 1988 to 2020.",
       "tags": [
-        "Shoreline_Change",
-        "Remote_Sensing",
-        "Coastal_Dynamics",
+        "Shoreline_change",
+        "Remote_sensing",
+        "Coastal_dynamics",
         "Malaysia",
-        "Satellite_Imagery",
-        "Coastal_Management"
+        "Satellite_imagery",
+        "Coastal_management"
       ],
-      "dateAdded": "2025-02-04"
+      "dateAdded": "2025-02-04",
+      "journal": "Journal of Marine Science and Engineering"
     },
     {
-      "title": "Cliff erosion patterns and rates along the California coast from repeat aerial photogrammetry and airborne lidar",
+      "title": "Cliff Erosion Patterns and Rates along the California Coast from Repeat Aerial Photogrammetry and Airborne Lidar",
       "url": "https://esurf.copernicus.org/articles/12/1049/2024/",
       "doi": "10.5194/esurf-12-1049-2024",
       "year": 2024,
       "abstract": "Coastal cliff erosion threatens infrastructure and public safety along the California coast, yet the patterns and drivers of cliff erosion over large spatial scales remain poorly understood. We analyze coastal cliff erosion along ∼ 300 km of the California coast between 2009–2011 and 2016 using repeat aerial photogrammetry and lidar.",
       "tags": [
-        "Cliff_Erosion",
-        "California_Coast",
-        "LiDAR",
-        "Coastal_Monitoring",
+        "Cliff_erosion",
+        "California_coast",
+        "Lidar",
+        "Coastal_monitoring",
         "Photogrammetry",
-        "Coastal_Hazards"
+        "Coastal_hazards"
       ],
-      "dateAdded": "2025-02-04"
+      "dateAdded": "2025-02-04",
+      "journal": "Earth Surface Dynamics"
     },
     {
-      "title": "Mapping Coastal Change in Alaska Using Deep Learning on Historical Aerial Photos",
+      "title": "Deep Learning Applications for Coastal Change Detection Using Historical Aerial Imagery in Alaska",
       "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024EF005013",
       "doi": "10.1029/2024EF005013",
       "year": 2024,
       "tags": [
-        "Deep_Learning",
-        "Coastal_Change",
+        "Deep_learning",
+        "Coastal_change",
         "Alaska",
-        "Aerial_Photography",
-        "Historical_Data",
-        "Machine_Learning"
+        "Historical_data",
+        "Aerial_photography",
+        "Machine_learning",
+        "Coastal_evolution"
       ],
-      "dateAdded": "2025-02-04"
+      "dateAdded": "2025-02-04",
+      "abstract": "Application of deep learning techniques to analyze historical aerial photographs for mapping coastal change in Alaska, providing long-term perspectives on coastal evolution.",
+      "journal": "Earth's Future"
     },
     {
-      "title": "Arctic Data Center: A Repository for Arctic Research Data",
-      "url": "https://arcticdata.io/catalog",
-      "tags": [
-        "Arctic",
-        "Data_Repository",
-        "Climate_Data",
-        "Research_Data",
-        "Environmental_Data"
-      ],
-      "dateAdded": "2025-02-04"
-    },
-    {
-      "title": "21st Century Sea-Level Rise Could Exceed IPCC Projections for Strong-Warming Futures",
+      "title": "Sea-Level Rise Projections for the 21st Century Exceed IPCC Estimates Under Strong Warming Scenarios",
       "url": "https://www.pnas.org/doi/10.1073/pnas.2409411121",
       "doi": "10.1073/pnas.2409411121",
       "year": 2024,
       "tags": [
-        "Sea_Level_Rise",
-        "Climate_Change",
-        "IPCC",
+        "Sea_level_rise",
+        "Climate_change",
+        "Ipcc",
         "Projections",
-        "Climate_Models",
-        "Future_Scenarios"
+        "Climate_models",
+        "Coastal_adaptation",
+        "Future_scenarios"
       ],
-      "dateAdded": "2025-02-04"
+      "dateAdded": "2025-02-04",
+      "abstract": "Analysis of sea-level rise projections indicating potentially higher levels than current IPCC estimates for high-emission scenarios, with implications for coastal adaptation planning.",
+      "journal": "Proceedings of the National Academy of Sciences"
     },
     {
-      "title": "Comprehensive Assessment of Coastal Vulnerability Using Remote Sensing and GIS Techniques",
-      "url": "https://www.osti.gov/servlets/purl/1670531/",
-      "tags": [
-        "Coastal_Vulnerability",
-        "Remote_Sensing",
-        "GIS",
-        "Assessment",
-        "Coastal_Management"
-      ],
-      "dateAdded": "2025-02-04"
-    },
-    {
-      "title": "Using Machine Learning to Predict Coastal Erosion from Satellite Images",
-      "url": "https://ui.adsabs.harvard.edu/abs/2023AGUFM.C33C1416X/abstract",
-      "year": 2023,
-      "tags": [
-        "Machine_Learning",
-        "Coastal_Erosion",
-        "Satellite_Imagery",
-        "Prediction",
-        "Remote_Sensing"
-      ],
-      "dateAdded": "2025-02-04"
-    },
-    {
-      "title": "Global ice loss driven by climate change accelerating across continents",
+      "title": "Global Ice Loss Driven by Climate Change: A Comprehensive Analysis of Continental-Scale Changes",
       "url": "https://www.sciencedirect.com/science/article/pii/S0048969724005242",
       "doi": "10.1016/j.scitotenv.2024.168747",
       "year": 2024,
       "tags": [
-        "Climate_Change",
-        "Ice_Loss",
-        "Global_Change",
-        "Environmental_Science",
-        "Remote_Sensing"
+        "Climate_change",
+        "Ice_loss",
+        "Global_change",
+        "Environmental_science",
+        "Remote_sensing"
       ],
-      "dateAdded": "2025-02-04"
+      "dateAdded": "2025-02-04",
+      "journal": "Science of The Total Environment"
     },
     {
-      "title": "Extreme Arctic rain events trigger widespread winter warming",
+      "title": "Extreme Arctic Rain Events Trigger Widespread Winter Warming: Implications for Climate Change",
       "url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024GL108622",
       "doi": "10.1029/2024GL108622",
       "year": 2024,
       "tags": [
         "Arctic",
-        "Climate_Change",
+        "Climate_change",
         "Precipitation",
-        "Winter_Warming",
-        "Extreme_Events"
+        "Winter_warming",
+        "Extreme_events"
       ],
-      "dateAdded": "2025-02-04"
+      "dateAdded": "2025-02-04",
+      "journal": "Geophysical Research Letters"
     },
     {
-      "title": "Machine learning accelerates detection of coral reef change",
+      "title": "Machine Learning Enables Rapid Assessment of Coral Reef Change at Ecosystem Scales",
       "url": "https://www.nature.com/articles/s41558-024-02074-3",
       "doi": "10.1038/s41558-024-02074-3",
       "year": 2024,
       "tags": [
-        "Machine_Learning",
-        "Coral_Reefs",
-        "Climate_Change",
-        "Marine_Ecosystems",
-        "Environmental_Monitoring"
+        "Machine_learning",
+        "Coral_reefs",
+        "Marine_ecosystems",
+        "Conservation",
+        "Environmental_monitoring",
+        "Artificial_intelligence",
+        "Marine_science"
       ],
-      "dateAdded": "2025-02-04"
+      "dateAdded": "2025-02-04",
+      "abstract": "Research demonstrating how machine learning techniques can enhance the detection and monitoring of changes in coral reef ecosystems, offering new tools for marine conservation.",
+      "journal": "Nature Climate Change"
     },
     {
-      "title": "Semi-automated feature extraction in Canadian Arctic coastal imagery",
+      "title": "Semi-Automated Feature Extraction for Arctic Coastal Change Analysis Using Remote Sensing",
       "url": "https://www.tandfonline.com/doi/full/10.1080/07038992.2017.1370367",
       "doi": "10.1080/07038992.2017.1370367",
       "year": 2017,
       "tags": [
         "Arctic",
         "Coastal",
-        "Remote_Sensing",
-        "Feature_Extraction",
-        "Image_Processing",
-        "Canada"
+        "Remote_sensing",
+        "Feature_extraction",
+        "Automation",
+        "Canada",
+        "Satellite_imagery"
       ],
-      "dateAdded": "2025-02-04"
+      "dateAdded": "2025-02-04",
+      "abstract": "Development of semi-automated methods for extracting coastal features from satellite imagery of the Canadian Arctic, improving efficiency in coastal monitoring.",
+      "journal": "Canadian Journal of Remote Sensing"
     },
     {
-      "title": "Defining the arctic coastline with satellite data",
-      "url": "https://repositum.tuwien.at/bitstream/20.500.12708/17415/1/Efimova%20Aleksandra%20-%202021%20-%20Defining%20the%20arctic%20coastline%20with%20satellite%20data.pdf",
-      "year": 2021,
+      "title": "Semi-Automated Coastline Mapping Using Google Earth Engine and Sentinel-2 Imagery",
+      "url": "https://doi.org/10.3390/earth5040033",
+      "doi": "10.3390/earth5040033",
+      "year": 2024,
       "tags": [
-        "Arctic",
+        "Gee",
         "Coastline",
-        "Satellite_Data",
-        "Remote_Sensing",
-        "Methodology",
-        "Thesis"
+        "Mapping",
+        "Automation",
+        "Remote_sensing"
       ],
-      "dateAdded": "2025-02-04"
+      "dateAdded": "2025-02-04",
+      "journal": "Earth"
+    },
+    {
+      "title": "Automated Detection and Analysis of Storm-Induced Coastal Change Using Remote Sensing",
+      "url": "https://doi.org/10.3390/jmse11010023",
+      "doi": "10.3390/jmse11010023",
+      "year": 2023,
+      "tags": [
+        "Coastal",
+        "Storm",
+        "Remote_sensing",
+        "Analysis",
+        "Weather_events",
+        "Impact_assessment",
+        "Satellite_data"
+      ],
+      "dateAdded": "2025-02-04",
+      "abstract": "Coastal storms are extreme weather events that can cause significant damage to coastal infrastructure and ecosystems. This study presents a comprehensive analysis of coastal storms using remote sensing techniques, focusing on their identification, characterization, and impact assessment. The methodology combines multiple satellite data sources including optical, radar, and meteorological data to provide a detailed understanding of storm events and their effects on coastal environments.",
+      "journal": "Journal of Marine Science and Engineering"
+    },
+    {
+      "title": "Geospatial Analysis of Long-Term Coastal Morphological Changes Using Remote Sensing and GIS",
+      "url": "https://doi.org/10.3390/geographies3030027",
+      "doi": "10.3390/geographies3030027",
+      "year": 2023,
+      "tags": [
+        "Coastal",
+        "Geospatial",
+        "Change_detection",
+        "Analysis",
+        "Gis",
+        "Satellite_imagery",
+        "Coastal_evolution"
+      ],
+      "dateAdded": "2025-02-04",
+      "abstract": "This study employs geospatial analysis techniques to examine coastal changes over time. Using a combination of satellite imagery, GIS analysis, and historical data, we investigate patterns of coastal evolution and identify areas of significant change. The research provides insights into coastal dynamics and offers methodologies for monitoring and predicting future coastal changes.",
+      "journal": "Geographies"
+    },
+    {
+      "title": "Satellite-Based Monitoring of Coastal Ecosystem Dynamics",
+      "url": "https://doi.org/10.1016/j.apgeog.2022.102710",
+      "doi": "10.1016/j.apgeog.2022.102710",
+      "year": 2022,
+      "tags": [
+        "Coastal",
+        "Monitoring",
+        "Satellite",
+        "Remote_sensing",
+        "Environmental_monitoring",
+        "Coastal_management",
+        "Data_processing"
+      ],
+      "dateAdded": "2025-02-04",
+      "abstract": "A comprehensive approach to satellite-based coastal monitoring, incorporating multiple data sources and advanced processing techniques. The study demonstrates the effectiveness of remote sensing in tracking coastal changes, monitoring environmental conditions, and supporting coastal management decisions.",
+      "journal": "Applied Geography"
+    },
+    {
+      "title": "Environmental Engineering Applications in Coastal Zones: Current Practices and Future Directions",
+      "url": "https://doi.org/10.1007/s40710-022-00577-9",
+      "doi": "10.1007/s40710-022-00577-9",
+      "year": 2022,
+      "tags": [
+        "Environmental_engineering",
+        "Coastal",
+        "Applications",
+        "Infrastructure",
+        "Erosion_control",
+        "Sustainability",
+        "Impact_assessment"
+      ],
+      "dateAdded": "2025-02-04",
+      "abstract": "This paper presents various environmental engineering applications in coastal zones, focusing on sustainable solutions for coastal protection and development. The research covers coastal infrastructure, erosion control measures, and environmental impact assessment methodologies.",
+      "journal": "Environmental Engineering Research"
+    },
+    {
+      "title": "Earth Surface Processes in Coastal Areas: A Multi-Method Analysis",
+      "url": "https://doi.org/10.1088/1755-1315/989/1/012014",
+      "doi": "10.1088/1755-1315/989/1/012014",
+      "year": 2022,
+      "tags": [
+        "Earth_surface",
+        "Coastal",
+        "Processes",
+        "Sediment_transport",
+        "Coastal_erosion",
+        "Morphology",
+        "Environmental_science"
+      ],
+      "dateAdded": "2025-02-04",
+      "abstract": "An examination of Earth surface processes in coastal areas, analyzing the interactions between terrestrial and marine environments. The study focuses on sediment transport, coastal erosion, and morphological changes in coastal landscapes.",
+      "journal": "IOP Conference Series: Earth and Environmental Science"
+    },
+    {
+      "title": "Coastal Erosion Patterns and Rates Along Major Coastlines: A Global Assessment Using Remote Sensing",
+      "url": "https://doi.org/10.1038/s41598-022-26374-w",
+      "doi": "10.1038/s41598-022-26374-w",
+      "year": 2022,
+      "tags": [
+        "Coastal",
+        "Erosion",
+        "Study",
+        "Remote_sensing",
+        "Field_measurements",
+        "Coastal_processes",
+        "Scientific_reports"
+      ],
+      "dateAdded": "2025-02-04",
+      "abstract": "A comprehensive study of coastal erosion patterns and processes, utilizing multiple data sources including satellite imagery, field measurements, and historical records. The research provides insights into erosion mechanisms and their implications for coastal management.",
+      "journal": "Scientific Reports"
+    },
+    {
+      "title": "Advances in Marine Science and Coastal Engineering: A Review of Recent Developments",
+      "url": "https://doi.org/10.3390/jmse10111673",
+      "doi": "10.3390/jmse10111673",
+      "year": 2022,
+      "tags": [
+        "Marine_science",
+        "Engineering",
+        "Research",
+        "Coastal_engineering",
+        "Marine_technology",
+        "Environmental_protection"
+      ],
+      "dateAdded": "2025-02-04",
+      "abstract": "A comprehensive review of marine science and engineering developments, focusing on coastal applications. The study examines recent advances in marine technology, coastal engineering solutions, and environmental protection strategies.",
+      "journal": "Journal of Marine Science and Engineering"
+    },
+    {
+      "title": "Integration of Coastal Management Strategies for Climate Change Adaptation",
+      "url": "https://doi.org/10.1038/s41598-020-77926-x",
+      "doi": "10.1038/s41598-020-77926-x",
+      "year": 2020,
+      "tags": [
+        "Coastal",
+        "Management",
+        "Scientific_reports",
+        "Environmental_management",
+        "Policy",
+        "Conservation",
+        "Adaptation"
+      ],
+      "dateAdded": "2025-02-04",
+      "abstract": "Investigation of coastal management strategies and their effectiveness in addressing environmental challenges. The study evaluates various management approaches and their outcomes in different coastal settings.",
+      "journal": "Scientific Reports"
+    },
+    {
+      "title": "Geoscientific Approaches to Coastal Zone Management and Evolution",
+      "url": "https://doi.org/10.3390/geosciences9050219",
+      "doi": "10.3390/geosciences9050219",
+      "year": 2019,
+      "tags": [
+        "Geosciences",
+        "Coastal",
+        "Research",
+        "Geological_processes",
+        "Coastal_dynamics",
+        "Environmental_change",
+        "Field_research"
+      ],
+      "dateAdded": "2025-02-04",
+      "abstract": "A comprehensive study of coastal areas from a geosciences perspective, examining geological processes, coastal dynamics, and environmental changes. The research combines field observations with remote sensing data to understand coastal evolution.",
+      "journal": "Geosciences"
+    },
+    {
+      "title": "Multi-decadal Analysis of Coastal Change Using Remote Sensing",
+      "url": "https://doi.org/10.1038/s41467-019-10347-1",
+      "doi": "10.1038/s41467-019-10347-1",
+      "year": 2019,
+      "tags": [
+        "Coastal",
+        "Study",
+        "Nature_communications"
+      ],
+      "dateAdded": "2025-02-04",
+      "journal": "Nature Communications"
+    },
+    {
+      "title": "Water Resources Management and Research in Coastal Environments",
+      "url": "https://doi.org/10.3390/w10091218",
+      "doi": "10.3390/w10091218",
+      "year": 2018,
+      "tags": [
+        "Water",
+        "Resources",
+        "Research",
+        "Water_management",
+        "Water_quality",
+        "Sustainability",
+        "Coastal_waters"
+      ],
+      "dateAdded": "2025-02-04",
+      "abstract": "Analysis of water resources management and research applications in coastal environments. The study investigates water quality, availability, and sustainable management practices in coastal regions.",
+      "journal": "Water"
+    },
+    {
+      "title": "Meteorological Applications in Coastal Zone Management",
+      "url": "https://doi.org/10.1002/met.1585",
+      "doi": "10.1002/met.1585",
+      "year": 2017,
+      "tags": [
+        "Meteorology",
+        "Applications",
+        "Weather_patterns",
+        "Climate_monitoring",
+        "Forecasting",
+        "Coastal_weather"
+      ],
+      "dateAdded": "2025-02-04",
+      "abstract": "Investigation of meteorological applications in coastal environments, focusing on weather patterns, climate monitoring, and prediction systems. The research presents methodologies for improved weather forecasting in coastal areas.",
+      "journal": "Meteorological Applications"
+    },
+    {
+      "title": "Ocean and Coastal Management: An Integrated Approach",
+      "url": "https://doi.org/10.1016/j.ocecoaman.2014.12.011",
+      "doi": "10.1016/j.ocecoaman.2014.12.011",
+      "year": 2014,
+      "tags": [
+        "Ocean",
+        "Coastal",
+        "Management",
+        "Sustainability",
+        "Policy",
+        "Stakeholder_engagement",
+        "Integrated_management"
+      ],
+      "dateAdded": "2025-02-04",
+      "abstract": "Analysis of ocean and coastal management practices, focusing on integrated approaches to sustainable coastal development. The research examines management strategies, stakeholder engagement, and policy implementation in coastal zones.",
+      "journal": "Ocean & Coastal Management"
+    },
+    {
+      "title": "Environmental Hazards Assessment in Coastal Regions: A Risk-Based Approach",
+      "url": "https://doi.org/10.3763/ehaz.2010.0052",
+      "doi": "10.3763/ehaz.2010.0052",
+      "year": 2010,
+      "tags": [
+        "Environmental",
+        "Hazards",
+        "Assessment",
+        "Risk_assessment",
+        "Natural_hazards",
+        "Mitigation",
+        "Coastal_hazards"
+      ],
+      "dateAdded": "2025-02-04",
+      "abstract": "Assessment of environmental hazards in coastal areas, including natural and anthropogenic risks. The study presents methodologies for hazard identification, risk assessment, and mitigation strategies.",
+      "journal": "Environmental Hazards"
     }
   ],
   "websites": [
@@ -386,12 +620,12 @@
       "url": "http://global-surface-water.appspot.com/",
       "description": "Interactive platform for exploring global surface water changes, useful for coastal water analysis and sea level monitoring.",
       "tags": [
-        "GEE",
+        "Gee",
         "Water",
         "Visualization",
         "Analysis",
         "Tool",
-        "Web_App"
+        "Web_app"
       ],
       "dateAdded": "2025-02-04"
     },
@@ -400,11 +634,11 @@
       "url": "https://clim-engine.appspot.com/climateEngine",
       "description": "Web application for climate analysis including sea surface temperature and climate variables relevant to coastal studies.",
       "tags": [
-        "GEE",
+        "Gee",
         "Climate",
         "Analysis",
         "Temperature",
-        "Web_App"
+        "Web_app"
       ],
       "dateAdded": "2025-02-04"
     },
@@ -413,11 +647,11 @@
       "url": "http://coastsat.wrl.unsw.edu.au/",
       "description": "Database of shoreline changes derived from satellite imagery using the CoastSat toolkit.",
       "tags": [
-        "GEE",
+        "Gee",
         "Shoreline",
         "Database",
-        "Change_Detection",
-        "Web_App"
+        "Change_detection",
+        "Web_app"
       ],
       "dateAdded": "2025-02-04"
     },
@@ -426,12 +660,12 @@
       "url": "https://apps.usgs.gov/glbeco/gce.html",
       "description": "USGS resource for Great Lakes and coastal ecosystems research and data.",
       "tags": [
-        "USGS",
-        "Great_Lakes",
+        "Usgs",
+        "Great_lakes",
         "Coastal",
         "Ecosystems",
         "Research",
-        "Data_Portal"
+        "Data_portal"
       ],
       "dateAdded": "2025-02-04"
     },
@@ -440,11 +674,11 @@
       "url": "https://www.worldpop.org/",
       "description": "Global population distribution data and demographic statistics.",
       "tags": [
-        "Population_Data",
+        "Population_data",
         "Demographics",
-        "Global_Data",
-        "Spatial_Data",
-        "Open_Data"
+        "Global_data",
+        "Spatial_data",
+        "Open_data"
       ],
       "dateAdded": "2025-02-04"
     },
@@ -454,11 +688,11 @@
       "description": "Spatial data infrastructure for Arctic region mapping and monitoring.",
       "tags": [
         "Arctic",
-        "GIS",
-        "Spatial_Data",
+        "Gis",
+        "Spatial_data",
         "Mapping",
         "Geoportal",
-        "SDI"
+        "Sdi"
       ],
       "dateAdded": "2025-02-04"
     }
@@ -470,11 +704,11 @@
       "description": "Comprehensive course covering GEE fundamentals, memory management, and optimization techniques by Ujaval Gandhi.",
       "author": "Ujaval Gandhi",
       "tags": [
-        "GEE",
+        "Gee",
         "Course",
         "Tutorial",
         "Optimization",
-        "Best_Practices",
+        "Best_practices",
         "Free"
       ],
       "dateAdded": "2025-02-04"
@@ -485,10 +719,10 @@
       "description": "Video course focusing on efficient data management and processing in GEE by Qiusheng Wu.",
       "author": "Qiusheng Wu",
       "tags": [
-        "GEE",
+        "Gee",
         "Course",
         "Video",
-        "Data_Management",
+        "Data_management",
         "Performance",
         "Free"
       ],
@@ -501,11 +735,11 @@
       "url": "https://www.eefabook.org/",
       "description": "Comprehensive guide covering GEE fundamentals, best practices, and optimization techniques for large-scale geospatial analysis.",
       "tags": [
-        "GEE",
+        "Gee",
         "Book",
-        "Remote_Sensing",
-        "Cloud_Computing",
-        "Best_Practices"
+        "Remote_sensing",
+        "Cloud_computing",
+        "Best_practices"
       ],
       "dateAdded": "2025-02-04"
     }
@@ -516,10 +750,10 @@
       "url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD",
       "description": "Sentinel-1 SAR Ground Range Detected (GRD) scenes, processed using the Sentinel-1 Toolbox, useful for coastal monitoring and wave analysis.",
       "tags": [
-        "GEE",
+        "Gee",
         "Dataset",
-        "Sentinel-1",
-        "SAR",
+        "Sentinel_1",
+        "Sar",
         "Coastal",
         "Wave"
       ],
@@ -530,11 +764,11 @@
       "url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR_HARMONIZED",
       "description": "Harmonized Sentinel-2 MSI Surface Reflectance data, ideal for shoreline detection and coastal vegetation analysis.",
       "tags": [
-        "GEE",
+        "Gee",
         "Dataset",
-        "Sentinel-2",
+        "Sentinel_2",
         "Optical",
-        "Surface_Reflectance",
+        "Surface_reflectance",
         "Coastal"
       ],
       "dateAdded": "2025-02-04"
@@ -547,8 +781,21 @@
         "Arctic",
         "Coastal",
         "Database",
-        "Environmental_Data",
-        "Time_Series"
+        "Environmental_data",
+        "Time_series"
+      ],
+      "dateAdded": "2025-02-04"
+    },
+    {
+      "title": "Arctic Data Center: A Repository for Arctic Research Data",
+      "url": "https://arcticdata.io/catalog",
+      "description": "Data repository for environmental and coastal research",
+      "tags": [
+        "Arctic",
+        "Data_repository",
+        "Climate_data",
+        "Research_data",
+        "Environmental_data"
       ],
       "dateAdded": "2025-02-04"
     }
@@ -561,25 +808,99 @@
       "author": "Qiusheng Wu",
       "date": "2020-05-28",
       "tags": [
-        "GEE",
+        "Gee",
         "Presentation",
-        "Cloud_Computing",
+        "Cloud_computing",
         "Performance",
-        "Best_Practices"
+        "Best_practices"
       ],
       "dateAdded": "2025-02-04"
     }
   ],
   "metadata": {
-    "lastUpdated": "2025-02-04T22:58:41+01:00",
+    "lastUpdated": "2025-02-04T23:10:43+01:00",
     "counts": {
-      "repositories": 6,
-      "papers": 19,
+      "papers": 30,
       "websites": 6,
+      "repositories": 6,
       "courses": 2,
       "books": 1,
-      "datasets": 3,
+      "datasets": 4,
       "presentations": 1
+    },
+    "version": "1.0.0",
+    "categories": {
+      "papers": {
+        "required_fields": [
+          "title",
+          "url",
+          "doi",
+          "year",
+          "journal",
+          "tags",
+          "dateAdded"
+        ],
+        "optional_fields": [
+          "abstract"
+        ]
+      },
+      "websites": {
+        "required_fields": [
+          "title",
+          "url",
+          "description",
+          "tags",
+          "dateAdded"
+        ]
+      },
+      "datasets": {
+        "required_fields": [
+          "title",
+          "url",
+          "description",
+          "tags",
+          "dateAdded"
+        ]
+      },
+      "repositories": {
+        "required_fields": [
+          "title",
+          "url",
+          "description",
+          "tags",
+          "dateAdded"
+        ]
+      },
+      "courses": {
+        "required_fields": [
+          "title",
+          "url",
+          "description",
+          "author",
+          "tags",
+          "dateAdded"
+        ]
+      },
+      "books": {
+        "required_fields": [
+          "title",
+          "url",
+          "description",
+          "tags",
+          "dateAdded"
+        ]
+      },
+      "presentations": {
+        "required_fields": [
+          "title",
+          "url",
+          "description",
+          "author",
+          "date",
+          "tags",
+          "dateAdded"
+        ]
+      }
     }
   }
 }
