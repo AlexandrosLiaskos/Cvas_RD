@@ -1,1 +1,3 @@
-# CVAS Resource Database\nA curated collection of coastal vulnerability assessment resources.
+# CVAS Resource Database
+
+A curated collection of coastal vulnerability assessment resources.
